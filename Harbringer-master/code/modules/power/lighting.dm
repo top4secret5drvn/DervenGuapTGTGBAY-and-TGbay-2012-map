@@ -230,6 +230,12 @@
 		on = (s && status == LIGHT_OK)
 		update()
 
+/obj/machinery/light/small/red
+	icon = 'icons/obj/lighting.dmi'
+	icon_state = "firelight0"
+	brightnessred = 0
+	brightnessgreen = 0
+	brightnessblue = 0
 
 
 /obj/machinery/light/spot

@@ -1214,7 +1214,7 @@
 "axr" = (/obj/machinery/power/apc{dir = 1; name = "North APC"; pixel_y = 24},/obj/structure/cable{d2 = 2; icon_state = "0-2"; pixel_y = 1},/turf/simulated/floor{icon_state = "cafeteria"; dir = 5},/area/toxins/rdoffice)
 "axs" = (/obj/structure/filingcabinet/chestdrawer,/obj/machinery/door_control{id = "anomaly_lock"; name = "Anomalous Materials Lockdown"; pixel_y = 24},/turf/simulated/floor{icon_state = "cafeteria"; dir = 5},/area/toxins/rdoffice)
 "axt" = (/obj/machinery/light{dir = 1},/obj/structure/table,/obj/item/device/taperecorder{pixel_x = -3},/obj/item/device/paicard{pixel_x = 4},/obj/machinery/camera/autoname,/turf/simulated/floor{icon_state = "cafeteria"; dir = 5},/area/toxins/rdoffice)
-"axu" = (/obj/structure/table,/obj/machinery/computer/skills{icon_state = "medlaptop"},/obj/machinery/alarm{pixel_y = 26},/turf/simulated/floor{icon_state = "cafeteria"; dir = 5},/area/toxins/rdoffice)
+"axu" = (/obj/structure/table,/obj/machinery/alarm{pixel_y = 26},/turf/simulated/floor{icon_state = "cafeteria"; dir = 5},/area/toxins/rdoffice)
 "axv" = (/obj/structure/table,/obj/item/weapon/folder/white,/obj/item/weapon/stamp/rd{pixel_x = 3; pixel_y = -2},/obj/item/weapon/paper/monitorkey,/obj/item/weapon/reagent_containers/food/drinks/mug/mesa,/turf/simulated/floor{icon_state = "cafeteria"; dir = 5},/area/toxins/rdoffice)
 "axw" = (/obj/structure/grille,/obj/structure/window/reinforced{dir = 8},/obj/structure/window/reinforced{dir = 4},/obj/structure/window/reinforced{dir = 1},/turf/simulated/floor/plating,/area/toxins/rdoffice)
 "axx" = (/obj/structure/sign/securearea{pixel_y = 32},/turf/simulated/floor{icon_state = "whitegreen"; dir = 9},/area/toxins/hallway{name = "\improper Research Labs Hallway"})

@@ -181,6 +181,67 @@
 		..()
 		reagents.add_reagent("condensedcapsaicin",1000)
 
+/obj/structure/reagent_dispensers/composttank
+	name = "Compost tank"
+	desc = "Compost."
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "composttank"
+	anchored = 0
+	density = 1
+	amount_per_transfer_from_this = 45
+	New()
+		..()
+		reagents.add_reagent("ammonia",1000)
+
+/obj/structure/reagent_dispensers/trictank
+	name = "Health and help tank"
+	desc = "What?"
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "trictank"
+	anchored = 0
+	density = 1
+	amount_per_transfer_from_this = 45
+	New()
+		..()
+		reagents.add_reagent("anti_toxin",500)
+		reagents.add_reagent("inaprovaline",500)
+
+/obj/structure/reagent_dispensers/toxintank
+	name = "Toxin tank"
+	desc = "What?"
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "acidtank"
+	anchored = 0
+	density = 1
+	amount_per_transfer_from_this = 45
+	New()
+		..()
+		reagents.add_reagent("toxin",1000)
+
+/obj/structure/reagent_dispensers/emptytank
+	name = "Tank"
+	desc = "What?"
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "emptytank"
+	anchored = 0
+	density = 1
+	amount_per_transfer_from_this = 45
+	New()
+		..()
+
+/obj/structure/reagent_dispensers/peppertank/portable
+	name = "Pepper Spray Refiller"
+	desc = "Refill pepper spray canisters."
+	icon = 'icons/obj/objects.dmi'
+	icon_state = "peppertank2"
+	anchored = 0
+	density = 1
+	amount_per_transfer_from_this = 45
+	New()
+		..()
+		reagents.add_reagent("condensedcapsaicin",1000)
+
+
 
 /obj/structure/reagent_dispensers/water_cooler
 	name = "Water-Cooler"

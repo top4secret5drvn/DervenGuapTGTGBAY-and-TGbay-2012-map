@@ -109,6 +109,11 @@ var/list/mechtoys = list(
 	var/reqtime = 0 //Cooldown for requisitions - Quarxink
 	var/last_viewed_group = "categories"
 
+
+/obj/machinery/computer/ordercomp/inwall
+	icon_state = "in_wall_request"
+	density = 0
+
 /*
 /obj/effect/marker/supplymarker
 	icon_state = "X"

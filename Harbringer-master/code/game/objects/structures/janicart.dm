@@ -157,6 +157,13 @@
 
 
 //old style retardo-cart
+
+/obj/structure/stool/bed/chair/janicart/seccart
+	icon_state = "sec"
+
+/obj/structure/stool/bed/chair/janicart/mailcart
+	icon_state = "mail"
+
 /obj/structure/stool/bed/chair/janicart
 	name = "janicart"
 	icon = 'icons/obj/vehicles.dmi'

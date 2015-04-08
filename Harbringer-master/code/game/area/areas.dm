@@ -196,6 +196,11 @@
 			icon_state = "bluenew"
 		else if(!fire && eject && !party)
 			icon_state = "red"
+			for(var/obj/machinery/light/small/red/Z)
+				Z.brightnessred = 3
+				Z.brightnessgreen = 1
+				Z.brightnessblue = 1
+
 		else if(party && !fire && !eject)
 			icon_state = "party"
 		else

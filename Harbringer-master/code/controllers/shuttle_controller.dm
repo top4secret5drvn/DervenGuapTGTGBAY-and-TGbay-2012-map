@@ -149,8 +149,8 @@ datum/shuttle_controller/emergency_shuttle/process()
 								M.Weaken(5)
 
 							//pods
-					start_location = locate(/area/shuttle/escape_pod1/transit)
-					end_location = locate(/area/shuttle/escape_pod1/centcom)
+					start_location = locate(/area/shuttle/escape/transit)
+					end_location = locate(/area/shuttle/escape/centcom)
 					start_location.move_contents_to(end_location, null, NORTH)
 
 					for(var/obj/machinery/door/D in machines)
@@ -290,8 +290,8 @@ datum/shuttle_controller/emergency_shuttle/process()
 							M.Weaken(5)
 
 				//pods
-				start_location = locate(/area/shuttle/escape_pod1/station)
-				end_location = locate(/area/shuttle/escape_pod1/transit)
+				start_location = locate(/area/shuttle/escape/station)
+				end_location = locate(/area/shuttle/escape/transit)
 				start_location.move_contents_to(end_location, /turf/simulated/floor/engine/vacuum/hull, NORTH)
 				for(var/obj/machinery/door/D in end_location)
 					spawn(0)

@@ -16,6 +16,30 @@
 	stutter = 10
 
 // Если кто ещё вздумает "пофиксить" тазер то лучше сразу врежте себе по яйцам и вырежте печень.
+// ...
+// Так Дервен и остался без печени.
+
+/obj/item/projectile/energy/electrode/pain
+	name = "electrode"
+	icon_state = "spark"
+	nodamage = 1
+
+	stun = 15
+	weaken = 15
+	stutter = 15
+
+	on_hit(var/atom/target, var/blocked = 0)
+		if(blocked >= 2)		return 0//Full block
+		if(isliving(target) && !isanimal(target))
+			var/mob/living/carbon/human/L = target
+			L.apply_effects(stun, weaken, paralyze, irradiate, stutter, eyeblur, drowsy, agony, blocked) // add in AGONY!
+			L.emote("scream")
+			sleep(4)
+			L.emote("scream")
+			L.emote("scream")
+		else
+			return 0
+		return 1
 
 //	agony = 65
 //	damage_type = HALLOSS

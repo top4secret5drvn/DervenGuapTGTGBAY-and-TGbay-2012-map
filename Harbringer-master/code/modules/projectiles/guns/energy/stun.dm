@@ -6,8 +6,22 @@
 	item_state = null	//so the human update icon uses the icon_state instead.
 	fire_sound = 'sound/weapons/Taser.ogg'
 	charge_cost = 100
+	var/pain_mode = 0
 	projectile_type = "/obj/item/projectile/energy/electrode"
 	cell_type = "/obj/item/weapon/cell/crap"
+
+	attack_self(mob/user as mob)
+		if(pain_mode == 0)
+			usr << "Pain mode enabled ###"
+			pain_mode = 1
+			projectile_type = "/obj/item/projectile/energy/electrode/pain"
+			return
+		if(pain_mode == 1)
+			usr << "Pain mode disabled ###"
+			pain_mode = 0
+			projectile_type = "/obj/item/projectile/energy/electrode"
+			return
+
 
 /obj/item/weapon/gun/energy/taser/cyborg
 	name = "taser gun"

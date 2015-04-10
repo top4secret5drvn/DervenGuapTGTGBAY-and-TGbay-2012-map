@@ -40,12 +40,12 @@
 
 //ACCount's Intents Panel End
 
-	using = new /obj/screen() //Right hud bar
-	using.dir = SOUTH
-	using.icon = ui_style
-	using.screen_loc = "EAST+1,SOUTH to EAST+1,NORTH"
-	using.layer = 18
-	adding += using
+	//using = new /obj/screen() //Right hud bar
+	//using.dir = SOUTH
+	//using.icon = ui_style
+	//using.screen_loc = "EAST+1,SOUTH to EAST+1,NORTH"
+	//using.layer = 18
+	//adding += using
 
 	using = new /obj/screen() //Lower hud bar
 	using.dir = EAST

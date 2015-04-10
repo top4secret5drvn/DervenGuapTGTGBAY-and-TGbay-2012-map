@@ -50,10 +50,10 @@
 #define ui_dropbutton "SOUTH-1,7"
 #define ui_drop_throw "SOUTH-1,8"
 #define ui_pull "SOUTH-1,10"
-#define ui_resist "EAST+1,SOUTH-1"
+#define ui_resist "EAST,SOUTH-1"
 #define ui_acti "SOUTH-1,12"
 #define ui_movi "EAST,SOUTH-1"
-#define ui_zonesel "EAST+1, NORTH"
+#define ui_zonesel "EAST+1, NORTH-15"
 #define ui_acti_alt "14:28,1:5" //alternative intent switcher for when the interface is hidden (F12)
 
 #define ui_borg_pull "EAST,SOUTH-1"
@@ -67,23 +67,23 @@
 #define ui_gun_select "10, SOUTH-1"
 
 //Upper-middle right (damage indicators)
-#define ui_toxin "EAST+1, NORTH-6"
-#define ui_fire "EAST+1, NORTH-8"
-#define ui_oxygen "EAST+1, NORTH-4"
-#define ui_pressure "EAST+1, SOUTH+5"
+#define ui_toxin "EAST, NORTH-6"
+#define ui_fire "EAST, NORTH-8"
+#define ui_oxygen "EAST, NORTH-4"
+#define ui_pressure "EAST, SOUTH+5"
 
 #define ui_alien_toxin "14:28,13:25"
 #define ui_alien_fire "14:28,12:25"
 #define ui_alien_oxygen "14:28,11:25"
 
 //Middle right (status indicators)
-#define ui_nutrition "EAST+1, NORTH-12"
-#define ui_temp "EAST+1, NORTH-10"
-#define ui_health "EAST+1, NORTH-11"
-#define ui_internal "EAST+1, NORTH-2"
+#define ui_nutrition "EAST, NORTH-12"
+#define ui_temp "EAST, NORTH-1"
+#define ui_health "EAST, NORTH-3"
+#define ui_internal "EAST, NORTH-2"
 									//borgs
-#define ui_borg_health "EAST+1, NORTH-11" //borgs have the health display where humans have the pressure damage indicator.
-#define ui_alien_health "EAST+1, NORTH-11" //aliens have the health display where humans have the pressure damage indicator.
+#define ui_borg_health "EAST, NORTH-11" //borgs have the health display where humans have the pressure damage indicator.
+#define ui_alien_health "EAST, NORTH-11" //aliens have the health display where humans have the pressure damage indicator.
 
 //Pop-up inventory
 #define ui_shoes "SOUTH,4"
@@ -106,8 +106,8 @@
 
 //#define ui_headset "SOUTH,8"
 #define ui_hstore1 "5,5"
-#define ui_sleep "EAST+1, NORTH-13"
-#define ui_rest "EAST+1, NORTH-14"
+#define ui_sleep "EAST, NORTH-13"
+#define ui_rest "EAST-1, NORTH-15"
 
 
 #define ui_iarrowleft "SOUTH-1,11"
@@ -221,9 +221,9 @@
 //#define ui_headset "SOUTH,8"
 #define ui_tg_hand "6:14,1:5"
 #define ui_tg_hstore1 "5,5"
-//#define ui_resist "EAST+1,SOUTH-1"
-#define ui_tg_sleep "EAST+1, NORTH-13"
-#define ui_tg_rest "EAST+1, NORTH-14"
+//#define ui_resist "EAST,SOUTH-1"
+#define ui_tg_sleep "EAST, NORTH-13"
+#define ui_tg_rest "EAST, NORTH-14"
 
 
 #define ui_tg_iarrowleft "SOUTH-1,11"

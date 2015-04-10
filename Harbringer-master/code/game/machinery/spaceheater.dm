@@ -1,3 +1,93 @@
+/obj/machinery/space_heater/cold
+	name = "space cold"
+	set_temperature = 100
+	icon_state = "scold0"
+
+	update_icon()
+		overlays.Cut()
+		icon_state = "scold[on]"
+
+	process()
+		if(on)
+			if(cell && cell.charge > 0)
+
+				var/turf/simulated/L = loc
+				if(istype(L))
+					var/datum/gas_mixture/env = L.return_air()
+					if(env.temperature != set_temperature + T0C)
+
+						var/transfer_moles = 0.25 * env.total_moles()
+
+						var/datum/gas_mixture/removed = env.remove(transfer_moles)
+
+						//world << "got [transfer_moles] moles at [removed.temperature]"
+
+						if(removed)
+
+							var/heat_capacity = removed.heat_capacity()
+							//world << "heating ([heat_capacity])"
+							if(heat_capacity) // Added check to avoid divide by zero (oshi-) runtime errors -- TLE
+								if(removed.temperature < set_temperature + T0C)
+									removed.temperature = min(removed.temperature - heating_power/heat_capacity, 1000) // Added min() check to try and avoid wacky superheating issues in low gas scenarios -- TLE
+								else
+									removed.temperature = max(removed.temperature - heating_power/heat_capacity, TCMB)
+								cell.use(heating_power/20000)
+
+							//world << "now at [removed.temperature]"
+
+						env.merge(removed)
+
+						//world << "turf now at [env.temperature]"
+
+
+			else
+				on = 0
+				update_icon()
+
+
+		return
+
+	Topic(href, href_list)
+		if (usr.stat)
+			return
+		if ((in_range(src, usr) && istype(src.loc, /turf)) || (istype(usr, /mob/living/silicon)))
+			usr.set_machine(src)
+
+			switch(href_list["op"])
+
+				if("temp")
+					var/value = text2num(href_list["val"])
+
+					// limit to 20-90 degC
+					set_temperature = dd_range(0, 90, set_temperature - value)
+
+				if("cellremove")
+					if(open && cell && !usr.get_active_hand())
+						cell.updateicon()
+						usr.put_in_hands(cell)
+						cell.add_fingerprint(usr)
+						cell = null
+						usr.visible_message("\blue [usr] removes the power cell from \the [src].", "\blue You remove the power cell from \the [src].")
+
+
+				if("cellinstall")
+					if(open && !cell)
+						var/obj/item/weapon/cell/C = usr.get_active_hand()
+						if(istype(C))
+							usr.drop_item()
+							cell = C
+							C.loc = src
+							C.add_fingerprint(usr)
+
+							usr.visible_message("\blue [usr] inserts a power cell into \the [src].", "\blue You insert the power cell into \the [src].")
+
+			updateDialog()
+		else
+			usr << browse(null, "window=spaceheater")
+			usr.unset_machine()
+		return
+
+
 /obj/machinery/space_heater
 	anchored = 0
 	density = 1

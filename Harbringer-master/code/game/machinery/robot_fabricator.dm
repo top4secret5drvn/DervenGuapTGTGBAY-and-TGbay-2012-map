@@ -16,6 +16,18 @@
 	icon = 'icons/obj/robotics.dmi'
 	icon_state = "fab-sec"
 
+/obj/machinery/robotic_fabricator/med
+	name = "Medical Fabricator"
+	icon = 'icons/obj/robotics.dmi'
+	icon_state = "fab-med"
+
+/obj/machinery/robotic_fabricator/hyd
+	name = "Hydroponics Fabricator"
+	icon = 'icons/obj/robotics.dmi'
+	icon_state = "fab-hyd"
+
+
+
 
 
 /obj/machinery/robotic_fabricator/attackby(var/obj/item/O as obj, var/mob/user as mob)
@@ -243,4 +255,198 @@ Please wait until completion...</TT><BR>
 	for (var/mob/M in viewers(1, src))
 		if (M.client && M.machine == src)
 			src.attack_hand(M)
+
+
+
+
+//////////////////////////////////
+////////////////////////////
+////////////////////////////////////////
+
+
+
+/obj/machinery/robotic_fabricator/med/attack_hand(user as mob)
+	var/dat
+	if (..())
+		return
+
+	if (src.operating)
+		dat = {"
+<TT>Building [src.being_built.name].<BR>
+Please wait until completion...</TT><BR>
+<BR>
+"}
+	else
+		dat = {"
+<B>Metal Amount:</B> [min(150000, src.metal_amount)] cm<sup>3</sup> (MAX: 150,000)<BR><HR>
+<BR>
+<A href='?src=\ref[src];makemed=1'>scalpel (25,000 cc metal.)<BR>
+<A href='?src=\ref[src];makemed=2'>surgicaldrill (25,000 cc metal.)<BR>
+<A href='?src=\ref[src];makemed=3'>hemostat (25,000 cc metal.)<BR>
+<A href='?src=\ref[src];makemed=4'>bonesetter (25,000 cc metal).<BR>
+"}
+
+	user << browse("<HEAD><TITLE>Medical Fabricator Control Panel</TITLE></HEAD><TT>[dat]</TT>", "window=med_fabricator")
+	onclose(user, "med_fabricator")
+	return
+
+/obj/machinery/robotic_fabricator/med/Topic(href, href_list)
+	if (..())
+		return
+
+	usr.set_machine(src)
+	src.add_fingerprint(usr)
+
+	if (href_list["makemed"])
+		if (!src.operating)
+			var/part_type = text2num(href_list["makemed"])
+
+			var/build_type = ""
+			var/build_time = 200
+			var/build_cost = 25000
+
+			switch (part_type)
+				if (1)
+					build_type = "/obj/item/weapon/scalpel"
+					build_time = 200
+					build_cost = 25000
+
+				if (2)
+					build_type = "/obj/item/weapon/surgicaldrill"
+					build_time = 200
+					build_cost = 25000
+
+				if (3)
+					build_type = "/obj/item/weapon/hemostat"
+					build_time = 200
+					build_cost = 25000
+
+				if (4)
+					build_type = "/obj/item/weapon/bonesetter"
+					build_time = 200
+					build_cost = 25000
+
+			var/building = text2path(build_type)
+			if (!isnull(building))
+				if (src.metal_amount >= build_cost)
+					src.operating = 1
+					src.use_power = 2
+
+					src.metal_amount = max(0, src.metal_amount - build_cost)
+
+					src.being_built = new building(src)
+
+					src.overlays += "fab-active"
+					src.updateUsrDialog()
+
+					spawn (build_time)
+						if (!isnull(src.being_built))
+							src.being_built.loc = get_turf(src)
+							src.being_built = null
+						src.use_power = 1
+						src.operating = 0
+						src.overlays -= "fab-active"
+		return
+
+	for (var/mob/M in viewers(1, src))
+		if (M.client && M.machine == src)
+			src.attack_hand(M)
+
+
+
+
+////////////
+///////////////
+//////////////////////////
+
+
+/obj/machinery/robotic_fabricator/hyd/attack_hand(user as mob)
+	var/dat
+	if (..())
+		return
+
+	if (src.operating)
+		dat = {"
+<TT>Building [src.being_built.name].<BR>
+Please wait until completion...</TT><BR>
+<BR>
+"}
+	else
+		dat = {"
+<B>Metal Amount:</B> [min(150000, src.metal_amount)] cm<sup>3</sup> (MAX: 150,000)<BR><HR>
+<BR>
+<A href='?src=\ref[src];makehyd=1'>minihoe (25,000 cc metal.)<BR>
+<A href='?src=\ref[src];makehyd=2'>bucket (25,000 cc metal.)<BR>
+<A href='?src=\ref[src];makehyd=3'>spade (25,000 cc metal.)<BR>
+<A href='?src=\ref[src];makehyd=4'>analyzer (25,000 cc metal).<BR>
+"}
+
+	user << browse("<HEAD><TITLE>Hydroponic Fabricator Control Panel</TITLE></HEAD><TT>[dat]</TT>", "window=hyd_fabricator")
+	onclose(user, "hyd_fabricator")
+	return
+
+/obj/machinery/robotic_fabricator/hyd/Topic(href, href_list)
+	if (..())
+		return
+
+	usr.set_machine(src)
+	src.add_fingerprint(usr)
+
+	if (href_list["makehyd"])
+		if (!src.operating)
+			var/part_type = text2num(href_list["makehyd"])
+
+			var/build_type = ""
+			var/build_time = 200
+			var/build_cost = 25000
+
+			switch (part_type)
+				if (1)
+					build_type = "/obj/item/weapon/minihoe"
+					build_time = 200
+					build_cost = 25000
+
+				if (2)
+					build_type = "/obj/item/weapon/reagent_containers/glass/bucket"
+					build_time = 200
+					build_cost = 25000
+
+				if (3)
+					build_type = "/obj/item/weapon/shovel/spade"
+					build_time = 200
+					build_cost = 25000
+
+				if (4)
+					build_type = "/obj/item/device/analyzer/plant_analyzer"
+					build_time = 200
+					build_cost = 25000
+
+			var/building = text2path(build_type)
+			if (!isnull(building))
+				if (src.metal_amount >= build_cost)
+					src.operating = 1
+					src.use_power = 2
+
+					src.metal_amount = max(0, src.metal_amount - build_cost)
+
+					src.being_built = new building(src)
+
+					src.overlays += "fab-active"
+					src.updateUsrDialog()
+
+					spawn (build_time)
+						if (!isnull(src.being_built))
+							src.being_built.loc = get_turf(src)
+							src.being_built = null
+						src.use_power = 1
+						src.operating = 0
+						src.overlays -= "fab-active"
+		return
+
+	for (var/mob/M in viewers(1, src))
+		if (M.client && M.machine == src)
+			src.attack_hand(M)
+
+
+
 

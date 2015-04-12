@@ -160,9 +160,11 @@
 
 /obj/structure/stool/bed/chair/janicart/seccart
 	icon_state = "sec"
+	name = "seccart"
 
 /obj/structure/stool/bed/chair/janicart/mailcart
 	icon_state = "mail"
+	name = "mailcart"
 
 /obj/structure/stool/bed/chair/janicart
 	name = "janicart"

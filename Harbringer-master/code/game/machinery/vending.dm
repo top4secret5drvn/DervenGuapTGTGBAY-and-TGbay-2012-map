@@ -852,10 +852,9 @@
     product_ads = "Mm, food stuffs!;Food and food accessories.;Get your plates!;You like forks?;I like forks.;Woo, utensils.;You don't really need these..."
     products = list(/obj/item/clothing/under/rank/chef = 2,/obj/item/clothing/suit/chef = 2,/obj/item/clothing/head/chefhat = 2,/obj/item/weapon/kitchenknife = 3,
     				/obj/item/weapon/kitchen/rollingpin = 2,/obj/item/weapon/storage/fancy/egg_box = 5,
-					/obj/item/weapon/reagent_containers/food/snacks/breadsys/butterpack = 3,/obj/item/weapon/reagent_containers/food/snacks/breadsys/salamistick = 3,
 					/obj/item/weapon/reagent_containers/food/snacks/sliceable/cheesewheel = 3,/obj/item/weapon/reagent_containers/food/condiment/sugar = 3,
 					/obj/item/weapon/reagent_containers/food/drinks/flour = 5,/obj/item/weapon/reagent_containers/food/snacks/spagetti = 3,
-					/obj/item/weapon/reagent_containers/food/snacks/meat = 3,/obj/item/weapon/reagent_containers/food/snacks/rawmeatball = 3,
+					/obj/item/weapon/reagent_containers/food/snacks/meat = 3,
 					/obj/item/weapon/reagent_containers/food/condiment/ketchup = 3,/obj/item/weapon/reagent_containers/food/snacks/grown/potato = 2,
 					/obj/item/weapon/reagent_containers/food/snacks/grown/tomato = 2,/obj/item/weapon/reagent_containers/food/snacks/grown/apple = 2,
 					/obj/item/weapon/reagent_containers/food/snacks/grown/mushroom/chanterelle = 2,/obj/item/weapon/reagent_containers/food/snacks/grown/mushroom/plumphelmet = 2)

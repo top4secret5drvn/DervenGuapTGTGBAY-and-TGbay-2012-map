@@ -620,14 +620,14 @@
 			visible_message("<span class='danger'>[user] smashes [src]!</span>")
 		user.say(pick(";RAAAAAAAARGH!", ";HNNNNNNNNNGGGGGGH!", ";GWAAAAAAAARRRHHH!", "NNNNNNNNGGGGGGGGHH!", ";AAAAAAARRRGH!" ))
 		destroy()
-	if(usr.a_intent == "disarm" && get_dist(usr, src) <= 1 && !usr.buckled && !flipped)
+/*	if(usr.a_intent == "disarm" && get_dist(usr, src) <= 1 && !usr.buckled && !flipped)	//Nooope.
 		if(prob(70))
 			visible_message("<span class='notice'>[user] climbs on the [src].</span>")
 			usr.loc = src.loc
 		else
 			sleep(5)
 			visible_message("<span class='warning'>[user] slipped off the edge of the [src].</span>")
-			usr.weakened += 3
+			usr.weakened += 3*/
 
 
 /*

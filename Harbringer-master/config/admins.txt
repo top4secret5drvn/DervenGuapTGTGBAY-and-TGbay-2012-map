@@ -9,4 +9,6 @@
 ssting - Host
 plin - Game Master
 vallat - Game Master
+zixxa - Game Master
+hap12345 - Game Master
 

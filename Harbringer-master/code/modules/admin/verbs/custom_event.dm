@@ -19,8 +19,10 @@
 
 	custom_event_msg = input
 
-	world << "<h1 class='alert'>ÈÂÎÍÒ ÏÎÑÎÍÛ</h1>"
-	world << "<h2 class='alert'>Ñóòü:</h2>"
+	world << "<h1 class='alert'>There is an IVENT here, you know?</h1>"
+	world << "<h2 class='alert'>Read this:</h2>"
+	/*world << "<h1 class='alert'>ÈÂÎÍÒ ÏÎÑÎÍÛ</h1>"	//Rusik
+	world << "<h2 class='alert'>Ñóòü:</h2>"*/
 	world << "<span class='alert'>[sanitize_uni(custom_event_msg)]</span>"
 	world << "<br>"
 

@@ -9,7 +9,8 @@
 	var/spamcheck = 0
 	var/emagged = 0
 	var/insults = 0
-	var/list/insultmsg = list("ÑÈÍÄÈÊÀÒ - ÑÈËÀ, ÍÒ - ÌÎÃÈËÀ!", "ÑÁ - ÏÈÄÎĞÀÑÛ!", "ÊÀÏÈÒÀÍ - ÃÎÍÄÎÍ!", "ÕÎÑ - ÕÓÅÑÎÑ!")
+	var/list/insultmsg = list("GLORY TO SYNDICATE, DEATH TO NT!", "SHITCURITY!", "CAPTAIN YOU-KNOW-WHAT!", "XOC XYECOC!!")
+	//var/list/insultmsg = list("ÑÈÍÄÈÊÀÒ - ÑÈËÀ, ÍÒ - ÌÎÃÈËÀ!", "ÑÁ - ÏÈÄÎĞÀÑÛ!", "ÊÀÏÈÒÀÍ - ÃÎÍÄÎÍ!", "ÕÎÑ - ÕÓÅÑÎÑ!")	//Rusik
 
 /obj/item/device/megaphone/attack_self(mob/living/user as mob)
 	if (user.client)
@@ -22,7 +23,8 @@
 	if(user.silent)
 		return
 	if(spamcheck)
-		user << "\red Íå òàê áûñòğî, êîâáîé!"
+		user << "\red Take it easy on your keyboard, bro!"
+		//user << "\red Íå òàê áûñòğî, êîâáîé!"	//Rusik
 		return
 
 	var/message = sanitize(input(user, "Shout a message?", "Megaphone", null)  as text)

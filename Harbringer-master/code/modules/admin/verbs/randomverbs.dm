@@ -24,17 +24,17 @@
 		src << "Only administrators may use this command."
 		return
 
-	var/msg = input("Сообщение:", text("Послать мысль [M.key]")) as text
+	var/msg = input("Message:", text("Subtle message to [M.key]")) as text	//Rusik
 
 	if (!msg)
 		return
 	if(usr)
 		if (usr.client)
 			if(usr.client.holder)
-				M << "\bold Ты слышишь голос в своей голове: \italic \"[sanitize_uni(msg)]\""
+				M << "\bold You hear a voice in your mind: \italic \"[sanitize_uni(msg)]\""	//Rusik
 
 	log_admin("SubtlePM: [key_name(usr)] -> [key_name(M)] : [msg]")
-	message_admins("\blue \bold Внушение: [key_name_admin(usr)] -> [key_name_admin(M)] : [sanitize_uni(msg)]", 1)
+	message_admins("\blue \bold Subtle message: [key_name_admin(usr)] -> [key_name_admin(M)] : [sanitize_uni(msg)]", 1)	//Rusik
 
 /client/proc/cmd_admin_world_narrate() // Allows administrators to fluff events a little easier -- TLE
 	set category = "Special Verbs"
@@ -44,7 +44,7 @@
 		src << "COCN"
 		return
 
-	var/msg = input("Сообщение:", text("Глобальное сообщение:")) as text
+	var/msg = input("Message:", text("Global message:")) as text	//Rusik
 
 	if (!msg)
 		return
@@ -821,7 +821,7 @@ Traitors and the like can also be revived with the previous role mostly intact.
 	if(!check_rights(R_FUN))	return
 
 	if (ticker && ticker.mode)
-		usr << "Поздно."
+		usr << "Too late."	//Rusik
 		return
 
 	if(ticker.random_players)

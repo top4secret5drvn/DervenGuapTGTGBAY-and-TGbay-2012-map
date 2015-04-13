@@ -38,8 +38,8 @@
 			return emote(copytext(message, 2))
 		if(message)
 			if(prob(15))
-			//	message = pick("...argh...", "...deaath...", "...haaaww...", "...diee...")
-				message = pick("...беги...", "...голод...", "...не жизнь...", "...убейте...", "...аагрх...", "...смерть...", "...жрать...", "...умрии...")
+				message = pick("...argh...", "...deaath...", "...haaaww...", "...diee...")
+			//	message = pick("...беги...", "...голод...", "...не жизнь...", "...убейте...", "...аагрх...", "...смерть...", "...жрать...", "...умрии...")	//Rusik
 			else
 				emote(pick("z_roar","z_shout","z_mutter","z_rawr"))
 				return

@@ -2,8 +2,8 @@
 	name = "bible"
 	desc = "Apply to head repeatedly."
 	icon_state ="bible"
-	throw_speed = 1
-	throw_range = 5
+	throw_2_speed = 1
+	throw_2_range = 5
 	w_class = 3.0
 	flags = FPRINT | TABLEPASS
 	var/mob/affecting = null

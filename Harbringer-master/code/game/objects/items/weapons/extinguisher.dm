@@ -6,10 +6,10 @@
 	item_state = "fire_extinguisher"
 	hitsound = 'sound/weapons/smash.ogg'
 	flags = FPRINT | TABLEPASS | CONDUCT
-	throwforce = 10
+	throw_2force = 10
 	w_class = 3.0
-	throw_speed = 1.5
-	throw_range = 7
+	throw_2_speed = 1.5
+	throw_2_range = 7
 	force = 15.0
 	m_amt = 90
 	attack_verb = list("slammed", "whacked", "bashed", "thunked", "battered", "bludgeoned", "thrashed")
@@ -25,7 +25,7 @@
 	item_state = "miniFE"
 	hitsound = null	//it is much lighter, after all.
 	flags = FPRINT | TABLEPASS
-	throwforce = 2
+	throw_2force = 2
 	w_class = 2.0
 	force = 5.0
 	m_amt = 0

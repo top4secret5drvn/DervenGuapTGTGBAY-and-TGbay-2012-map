@@ -2,7 +2,7 @@
 
 /obj/effect/step_trigger
 	var/affect_ghosts = 0
-	var/stopper = 1 // stops throwers
+	var/stopper = 1 // stops throw_2ers
 	invisibility = 101 // nope cant see this shit
 	anchored = 1
 
@@ -21,8 +21,8 @@
 
 /* Tosses things in a certain direction */
 
-/obj/effect/step_trigger/thrower
-	var/direction = SOUTH // the direction of throw
+/obj/effect/step_trigger/throw_2er
+	var/direction = SOUTH // the direction of throw_2
 	var/tiles = 3	// if 0: forever until atom hits a stopper
 	var/immobilize = 1 // if nonzero: prevents mobs from moving while they're being flung
 	var/speed = 1	// delay of movement
@@ -35,8 +35,8 @@
 			return
 		var/atom/movable/AM = A
 		var/curtiles = 0
-		var/stopthrow = 0
-		for(var/obj/effect/step_trigger/thrower/T in orange(2, src))
+		var/stopthrow_2 = 0
+		for(var/obj/effect/step_trigger/throw_2er/T in orange(2, src))
 			if(AM in T.affecting)
 				return
 
@@ -46,7 +46,7 @@
 				M.canmove = 0
 
 		affecting.Add(AM)
-		while(AM && !stopthrow)
+		while(AM && !stopthrow_2)
 			if(tiles)
 				if(curtiles >= tiles)
 					break
@@ -61,11 +61,11 @@
 			if(!nostop)
 				for(var/obj/effect/step_trigger/T in get_step(AM, direction))
 					if(T.stopper && T != src)
-						stopthrow = 1
+						stopthrow_2 = 1
 			else
 				for(var/obj/effect/step_trigger/teleporter/T in get_step(AM, direction))
 					if(T.stopper)
-						stopthrow = 1
+						stopthrow_2 = 1
 
 			if(AM)
 				var/predir = AM.dir
@@ -82,7 +82,7 @@
 			if(immobilize)
 				M.canmove = 1
 
-/* Stops things thrown by a thrower, doesn't do anything */
+/* Stops things throw_2n by a throw_2er, doesn't do anything */
 
 /obj/effect/step_trigger/stopper
 

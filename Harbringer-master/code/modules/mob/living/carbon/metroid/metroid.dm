@@ -647,9 +647,9 @@ mob/living/carbon/slime/var/temperature_resistance = T0C+75
 	flags = TABLEPASS
 	force = 1.0
 	w_class = 1.0
-	throwforce = 1.0
-	throw_speed = 3
-	throw_range = 6
+	throw_2force = 1.0
+	throw_2_speed = 3
+	throw_2_range = 6
 	origin_tech = "biotech=4"
 	var/Uses = 1 // uses before it goes inert
 
@@ -964,9 +964,9 @@ mob/living/carbon/slime/var/temperature_resistance = T0C+75
 	flags = TABLEPASS
 	force = 1.0
 	w_class = 1.0
-	throwforce = 1.0
-	throw_speed = 3
-	throw_range = 6
+	throw_2force = 1.0
+	throw_2_speed = 3
+	throw_2_range = 6
 	origin_tech = "biotech=4"
 	var/POWERFLAG = 0 // sshhhhhhh
 	var/Flush = 30

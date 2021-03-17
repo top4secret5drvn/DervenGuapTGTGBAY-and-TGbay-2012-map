@@ -163,10 +163,10 @@
 	desc = "A hand-held scanner able to diagnose robotic injuries."
 	flags = FPRINT | TABLEPASS | CONDUCT
 	slot_flags = SLOT_BELT
-	throwforce = 3
+	throw_2force = 3
 	w_class = 1.0
-	throw_speed = 5
-	throw_range = 10
+	throw_2_speed = 5
+	throw_2_range = 10
 	m_amt = 200
 	origin_tech = "magnets=1;biotech=1"
 	var/mode = 1;

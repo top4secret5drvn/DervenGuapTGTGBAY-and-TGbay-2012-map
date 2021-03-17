@@ -4,10 +4,10 @@
 	icon_state = "holder"
 	item_state = "assembly"
 	flags = FPRINT | TABLEPASS| CONDUCT
-	throwforce = 5
+	throw_2force = 5
 	w_class = 2.0
-	throw_speed = 3
-	throw_range = 10
+	throw_2_speed = 3
+	throw_2_range = 10
 
 	var/secured = 0
 	var/obj/item/device/assembly/a_left = null

@@ -370,9 +370,9 @@
 		if("rest")
 			usr.resting = !(usr.resting)
 			src << "\blue You are now [usr.resting ? "resting" : "getting up"]"
-		if("throw")
+		if("throw_2")
 			if(!usr.stat && isturf(usr.loc) && !usr.restrained())
-				usr:toggle_throw_mode()
+				usr:toggle_throw_2_mode()
 		if("drop")
 			usr.drop_item_v()
 

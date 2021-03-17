@@ -3,8 +3,8 @@
 	icon = 'icons/obj/items.dmi'
 	icon_state = "implanter0"
 	item_state = "syringe_0"
-	throw_speed = 1
-	throw_range = 5
+	throw_2_speed = 1
+	throw_2_range = 5
 	w_class = 2.0
 	var/obj/item/weapon/implant/imp = null
 

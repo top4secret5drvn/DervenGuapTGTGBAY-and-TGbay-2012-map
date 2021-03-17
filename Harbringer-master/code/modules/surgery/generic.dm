@@ -81,7 +81,7 @@
 		var/datum/organ/external/affected = target.get_organ(target_zone)
 		user.visible_message("\blue [user] clamps bleeders in [target]'s [affected.display_name] with \the [tool].",	\
 		"\blue You clamp bleeders in [target]'s [affected.display_name] with \the [tool].")
-		affected.clamp()
+		affected.clamp2()
 		spread_germs_to_organ(affected, user)
 
 	fail_step(mob/living/user, mob/living/carbon/human/target, target_zone, obj/item/tool)

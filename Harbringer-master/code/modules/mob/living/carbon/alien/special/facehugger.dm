@@ -16,7 +16,7 @@ var/const/MAX_ACTIVE_TIME = 400
 	item_state = "facehugger"
 	w_class = 1 //note: can be picked up by aliens unlike most other items of w_class below 4
 	flags = FPRINT | TABLEPASS | MASKCOVERSMOUTH | MASKCOVERSEYES | MASKINTERNALS
-	throw_range = 5
+	throw_2_range = 5
 
 	var/stat = CONSCIOUS //UNCONSCIOUS is the idle state in this case
 
@@ -94,15 +94,15 @@ var/const/MAX_ACTIVE_TIME = 400
 	if(CanHug(AM))
 		Attach(AM)
 
-/obj/item/clothing/mask/facehugger/throw_at(atom/target, range, speed)
+/obj/item/clothing/mask/facehugger/throw_2_at(atom/target, range, speed)
 	..()
 	if(stat == CONSCIOUS)
-		icon_state = "[initial(icon_state)]_thrown"
+		icon_state = "[initial(icon_state)]_throw_2n"
 		spawn(15)
-			if(icon_state == "[initial(icon_state)]_thrown")
+			if(icon_state == "[initial(icon_state)]_throw_2n")
 				icon_state = "[initial(icon_state)]"
 
-/obj/item/clothing/mask/facehugger/throw_impact(atom/hit_atom)
+/obj/item/clothing/mask/facehugger/throw_2_impact(atom/hit_atom)
 	..()
 	if(stat == CONSCIOUS)
 		icon_state = "[initial(icon_state)]"

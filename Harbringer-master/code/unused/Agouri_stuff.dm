@@ -388,13 +388,13 @@
 	if(usr.stat || usr.restrained() || usr.lying)
 		return ..()
 
-	if(usr.hand && istype(usr.l_hand, /obj/item/weapon/flamethrower))
+	if(usr.hand && istype(usr.l_hand, /obj/item/weapon/flamethrow_2er))
 		var/turflist = getline(usr,src)
-		var/obj/item/weapon/flamethrower/F = usr.l_hand
+		var/obj/item/weapon/flamethrow_2er/F = usr.l_hand
 		F.flame_turf(turflist)
-	else if(!usr.hand && istype(usr.r_hand, /obj/item/weapon/flamethrower))
+	else if(!usr.hand && istype(usr.r_hand, /obj/item/weapon/flamethrow_2er))
 		var/turflist = getline(usr,src)
-		var/obj/item/weapon/flamethrower/F = usr.r_hand
+		var/obj/item/weapon/flamethrow_2er/F = usr.r_hand
 		F.flame_turf(turflist)
 
 	return ..()
@@ -1352,7 +1352,7 @@ turf/simulated/floor/proc/update_icon()
 			if(!(icon_state in list("grass1","grass2","grass3","grass4")))
 				icon_state = "grass[pick("1","2","3","4")]"
 	spawn(1)
-		if(istype(src,/turf/simulated/floor)) //Was throwing runtime errors due to a chance of it changing to space halfway through.
+		if(istype(src,/turf/simulated/floor)) //Was throw_2ing runtime errors due to a chance of it changing to space halfway through.
 			if(air)
 				update_visuals(air)
 

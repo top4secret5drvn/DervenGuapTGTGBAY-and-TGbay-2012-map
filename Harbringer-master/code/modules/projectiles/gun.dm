@@ -9,9 +9,9 @@
 	slot_flags = SLOT_BELT
 	m_amt = 2000
 	w_class = 3
-	throwforce = 5
-	throw_speed = 4
-	throw_range = 5
+	throw_2force = 5
+	throw_2_speed = 4
+	throw_2_range = 5
 	force = 5.0
 	origin_tech = "combat=1"
 	attack_verb = list("struck", "hit", "bashed")

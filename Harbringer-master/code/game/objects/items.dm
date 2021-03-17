@@ -122,7 +122,7 @@
 		var/obj/item/weapon/storage/S = src.loc
 		S.remove_from_storage(src)
 
-	src.throwing = 0
+	src.throw_2ing = 0
 	if (src.loc == user)
 		//canremove==0 means that object may not be removed. You can still wear it. This only applies to clothing. /N
 		if(!src.canremove)
@@ -161,7 +161,7 @@
 			if (M.s_active == src.loc)
 				if (M.client)
 					M.client.screen -= src
-	src.throwing = 0
+	src.throw_2ing = 0
 	if (src.loc == user)
 		//canremove==0 means that object may not be removed. You can still wear it. This only applies to clothing. /N
 		if(istype(src, /obj/item/clothing) && !src:canremove)

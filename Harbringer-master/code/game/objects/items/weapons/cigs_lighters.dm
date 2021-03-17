@@ -55,7 +55,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	name = "cigarette"
 	desc = "A roll of tobacco and nicotine."
 	icon_state = "cigoff"
-	throw_speed = 0.5
+	throw_2_speed = 0.5
 	item_state = "cigoff"
 	w_class = 1
 	body_parts_covered = null
@@ -212,7 +212,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	icon_on = "cigaron"
 	icon_off = "cigaroff"
 	type_butt = /obj/item/weapon/cigbutt/cigarbutt
-	throw_speed = 0.5
+	throw_2_speed = 0.5
 	item_state = "cigaroff"
 	smoketime = 1500
 	chem_volume = 20
@@ -239,7 +239,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	icon = 'icons/obj/clothing/masks.dmi'
 	icon_state = "cigbutt"
 	w_class = 1
-	throwforce = 1
+	throw_2force = 1
 
 /obj/item/weapon/cigbutt/New()
 	..()
@@ -341,7 +341,7 @@ CIGARETTE PACKETS ARE IN FANCY.DM
 	var/icon_on = "lighter-g-on"
 	var/icon_off = "lighter-g"
 	w_class = 1
-	throwforce = 4
+	throw_2force = 4
 	flags = TABLEPASS | CONDUCT
 	slot_flags = SLOT_BELT
 	attack_verb = list("burnt", "singed")

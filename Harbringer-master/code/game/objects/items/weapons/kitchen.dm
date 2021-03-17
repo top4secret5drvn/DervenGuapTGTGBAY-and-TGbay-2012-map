@@ -19,9 +19,9 @@
 /obj/item/weapon/kitchen/utensil
 	force = 8.0
 	w_class = 1.0
-	throwforce = 5.0
-	throw_speed = 3
-	throw_range = 5
+	throw_2force = 5.0
+	throw_2_speed = 3
+	throw_2_range = 5
 	flags = FPRINT | TABLEPASS | CONDUCT
 	origin_tech = "materials=1"
 	attack_verb = list("attacked", "poked")
@@ -131,7 +131,7 @@
 	desc = "Can cut through any food."
 	icon_state = "knife"
 	force = 17.5
-	throwforce = 10.0
+	throw_2force = 10.0
 
 	suicide_act(mob/user)
 		viewers(user) << pick("\red <b>[user] is slitting \his wrists with the [src.name]! It looks like \he's trying to commit suicide.</b>", \
@@ -144,7 +144,7 @@
 	desc = "The bluntest of blades."
 	icon_state = "pknife"
 	force = 13.0
-	throwforce = 10.0
+	throw_2force = 10.0
 
 /obj/item/weapon/kitchen/utensil/pknife/attack(target as mob, mob/living/user as mob)
 	if ((CLUMSY in user.mutations) && prob(50))
@@ -166,9 +166,9 @@
 	sharp = 1
 	force = 18.0
 	w_class = 3.0
-	throwforce = 6.0
-	throw_speed = 3
-	throw_range = 6
+	throw_2force = 6.0
+	throw_2_speed = 3
+	throw_2_range = 6
 	m_amt = 12000
 	origin_tech = "materials=1"
 	attack_verb = list("slashed", "sliced", "torn", "ripped", "diced", "cut")
@@ -196,9 +196,9 @@
 	flags = FPRINT | TABLEPASS | CONDUCT
 	force = 22.0
 	w_class = 2.0
-	throwforce = 8.0
-	throw_speed = 3
-	throw_range = 6
+	throw_2force = 8.0
+	throw_2_speed = 3
+	throw_2_range = 6
 	m_amt = 12000
 	origin_tech = "materials=1"
 	attack_verb = list("cleaved", "slashed", "sliced", "torn", "ripped", "diced", "cut")
@@ -216,9 +216,9 @@
 	desc = "Used to knock out the Bartender."
 	icon_state = "rolling_pin"
 	force = 12.0
-	throwforce = 10.0
-	throw_speed = 2
-	throw_range = 7
+	throw_2force = 10.0
+	throw_2_speed = 2
+	throw_2_range = 7
 	w_class = 3.0
 	attack_verb = list("bashed", "battered", "bludgeoned", "thrashed", "whacked") //I think the rollingpin attackby will end up ignoring this anyway.
 
@@ -263,10 +263,10 @@
 	icon = 'icons/obj/food.dmi'
 	icon_state = "tray"
 	desc = "A metal tray to lay food on."
-	throwforce = 12.0
-	throwforce = 10.0
-	throw_speed = 1
-	throw_range = 5
+	throw_2force = 12.0
+	throw_2force = 10.0
+	throw_2_speed = 1
+	throw_2_range = 5
 	w_class = 3.0
 	flags = FPRINT | TABLEPASS | CONDUCT
 	m_amt = 3000

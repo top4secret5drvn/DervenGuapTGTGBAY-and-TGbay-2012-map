@@ -6,7 +6,7 @@
 	flags = FPRINT | TABLEPASS | CONDUCT
 	slot_flags = SLOT_BELT
 	force = 15
-	throwforce = 7
+	throw_2force = 7
 	w_class = 3
 	origin_tech = "combat=4"
 	attack_verb = list("flogged", "whipped", "lashed", "disciplined")

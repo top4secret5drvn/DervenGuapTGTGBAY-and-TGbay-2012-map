@@ -5,8 +5,8 @@
 	icon = 'icons/obj/grenade.dmi'
 	icon_state = "grenade"
 	item_state = "flashbang"
-	throw_speed = 4
-	throw_range = 20
+	throw_2_speed = 4
+	throw_2_range = 20
 	flags = FPRINT | TABLEPASS | CONDUCT
 	slot_flags = SLOT_BELT
 	var/active = 0
@@ -60,7 +60,7 @@
 			add_fingerprint(user)
 			if(iscarbon(user))
 				var/mob/living/carbon/C = user
-				C.throw_mode_on()
+				C.throw_2_mode_on()
 	return
 
 

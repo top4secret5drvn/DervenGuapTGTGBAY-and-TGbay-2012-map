@@ -50,7 +50,7 @@
 	icon = 'icons/obj/objects.dmi'
 	icon_state = "stool"
 	force = 10
-	throwforce = 10
+	throw_2force = 10
 	w_class = 5.0
 	var/obj/structure/stool/origin = null
 

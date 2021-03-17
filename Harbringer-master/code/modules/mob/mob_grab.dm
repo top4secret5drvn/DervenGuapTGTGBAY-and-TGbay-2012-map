@@ -34,8 +34,8 @@
 	hud.master = src
 
 
-//Used by throw code to hand over the mob, instead of throwing the grab. The grab is then deleted by the throw code.
-/obj/item/weapon/grab/proc/throw()
+//Used by throw_2 code to hand over the mob, instead of throw_2ing the grab. The grab is then deleted by the throw_2 code.
+/obj/item/weapon/grab/proc/throw_2()
 	if(affecting)
 		if(affecting.buckled)
 			return null

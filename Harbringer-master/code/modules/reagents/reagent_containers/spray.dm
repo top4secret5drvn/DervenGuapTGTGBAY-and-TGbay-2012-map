@@ -6,10 +6,10 @@
 	item_state = "cleaner"
 	flags = TABLEPASS|OPENCONTAINER|FPRINT|NOBLUDGEON
 	slot_flags = SLOT_BELT
-	throwforce = 3
+	throw_2force = 3
 	w_class = 2.0
-	throw_speed = 2
-	throw_range = 10
+	throw_2_speed = 2
+	throw_2_range = 10
 	amount_per_transfer_from_this = 10
 	volume = 250
 	possible_transfer_amounts = null
@@ -149,7 +149,7 @@
 	icon = 'icons/obj/gun.dmi'
 	icon_state = "chemsprayer"
 	item_state = "chemsprayer"
-	throwforce = 3
+	throw_2force = 3
 	w_class = 3.0
 	volume = 600
 	origin_tech = "combat=3;materials=3;engineering=3"

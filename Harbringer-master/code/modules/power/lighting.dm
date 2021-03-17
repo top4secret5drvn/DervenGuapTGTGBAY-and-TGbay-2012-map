@@ -677,7 +677,7 @@
 	icon = 'icons/obj/lighting.dmi'
 	flags = FPRINT | TABLEPASS
 	force = 2
-	throwforce = 5
+	throw_2force = 5
 	w_class = 1
 	var/status = 0		// LIGHT_OK, LIGHT_BURNED or LIGHT_BROKEN
 	var/base_state
@@ -723,7 +723,7 @@
 	brightnessgreen = 5
 	brightnessblue = 4
 
-/obj/item/weapon/light/throw_impact(atom/hit_atom)
+/obj/item/weapon/light/throw_2_impact(atom/hit_atom)
 	..()
 	shatter()
 

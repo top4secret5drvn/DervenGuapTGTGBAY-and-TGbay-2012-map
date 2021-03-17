@@ -288,13 +288,13 @@ We can't just insert in HTML into the nanoUI so we need the raw data to play wit
 	anchored = 0
 	w_class = 1.0
 	force = 0.0
-	throwforce = 0.0
-	throw_speed = 1
-	throw_range = 20
+	throw_2force = 0.0
+	throw_2_speed = 1
+	throw_2_range = 20
 	flags = FPRINT | TABLEPASS | CONDUCT
 	afterattack(atom/target as mob|obj|turf|area, mob/user as mob)
 		user.drop_item()
-		src.throw_at(target, throw_range, throw_speed)
+		src.throw_2_at(target, throw_2_range, throw_2_speed)
 
 /obj/effect/stop
 	var/victim = null

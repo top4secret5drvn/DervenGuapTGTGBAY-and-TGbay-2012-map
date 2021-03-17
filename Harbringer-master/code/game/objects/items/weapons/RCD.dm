@@ -14,9 +14,9 @@ RCD
 	anchored = 0.0
 	flags = FPRINT | TABLEPASS| CONDUCT
 	force = 13.0
-	throwforce = 10.0
-	throw_speed = 1
-	throw_range = 5
+	throw_2force = 10.0
+	throw_2_speed = 1
+	throw_2_range = 5
 	w_class = 3.0
 	m_amt = 50000
 	origin_tech = "engineering=4;materials=2"

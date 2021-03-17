@@ -5,9 +5,9 @@
 	icon_state = "glass_wire"
 	w_class = 3.0
 	force = 3.0
-	throwforce = 5.0
-	throw_speed = 5
-	throw_range = 20
+	throw_2force = 5.0
+	throw_2_speed = 5
+	throw_2_range = 20
 	flags = FPRINT | TABLEPASS | CONDUCT
 	max_amount = 60
 

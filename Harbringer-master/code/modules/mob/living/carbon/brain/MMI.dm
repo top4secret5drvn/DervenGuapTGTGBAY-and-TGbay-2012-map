@@ -67,7 +67,7 @@
 			user << "\blue You upend the MMI, spilling the brain onto the floor."
 			var/obj/item/brain/brain = new(user.loc)
 			brainmob.container = null//Reset brainmob mmi var.
-			brainmob.loc = brain//Throw mob into brain.
+			brainmob.loc = brain//throw_2 mob into brain.
 			living_mob_list -= brainmob//Get outta here
 			brain.brainmob = brainmob//Set the brain to use the brainmob
 			brainmob = null//Set mmi brainmob var to null

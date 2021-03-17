@@ -564,7 +564,7 @@ This function completely restores a damaged organ to perfect condition.
 			"<span class='moderate'><b>Your [display_name] goes flying off!</b></span>",\
 			"You hear a terrible sound of ripping tendons and flesh.")
 
-			//Throw organs around
+			//throw_2 organs around
 			var/lol = pick(cardinal)
 			step(organ,lol)
 
@@ -584,7 +584,7 @@ This function completely restores a damaged organ to perfect condition.
 		W.bandaged = 1
 	return rval
 
-/datum/organ/external/proc/clamp()
+/datum/organ/external/proc/clamp2()
 	var/rval = 0
 	src.status &= ~ORGAN_BLEEDING
 	for(var/datum/wound/W in wounds)

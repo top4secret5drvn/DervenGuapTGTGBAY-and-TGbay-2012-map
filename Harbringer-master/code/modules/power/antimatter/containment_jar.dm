@@ -6,9 +6,9 @@
 	density = 0
 	anchored = 0
 	force = 8
-	throwforce = 10
-	throw_speed = 1
-	throw_range = 2
+	throw_2force = 10
+	throw_2_speed = 1
+	throw_2_range = 2
 
 	var/fuel = 10000
 	var/fuel_max = 10000//Lets try this for now

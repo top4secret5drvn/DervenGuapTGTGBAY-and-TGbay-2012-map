@@ -113,7 +113,7 @@
 	if(ismob(AM))
 		tforce = 40
 	else
-		tforce = AM:throwforce
+		tforce = AM:throw_2force
 
 	src.health -= tforce
 

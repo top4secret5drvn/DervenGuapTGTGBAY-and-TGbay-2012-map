@@ -102,7 +102,7 @@
 			if(H)
 				H.loc = get_turf(src)
 				H.ex_act(severity + 1)
-				H << "<span class='warning'>You are forcefully thrown from \the [src]!</span>"
+				H << "<span class='warning'>You are forcefully throw_2n from \the [src]!</span>"
 			del(ion_trail)
 			del(src)
 		if(2)

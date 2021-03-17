@@ -16,7 +16,7 @@
 	overlays += "pai-off"
 
 /obj/item/device/paicard/Del()
-	//Will stop people throwing friend pAIs into the singularity so they can respawn
+	//Will stop people throw_2ing friend pAIs into the singularity so they can respawn
 	if(!isnull(pai))
 		pai.death(0)
 	..()

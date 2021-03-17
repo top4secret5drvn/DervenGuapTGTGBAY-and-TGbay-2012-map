@@ -6,9 +6,9 @@
 	var/move_speed = 10
 	var/l_move_time = 1
 	var/m_flag = 1
-	var/throwing = 0
-	var/throw_speed = 2
-	var/throw_range = 7
+	var/throw_2ing = 0
+	var/throw_2_speed = 2
+	var/throw_2_range = 7
 	var/moved_recently = 0
 	var/mob/pulledby = null
 
@@ -23,9 +23,9 @@
 	return
 
 /atom/movable/Bump(var/atom/A as mob|obj|turf|area, yes)
-	if(src.throwing)
-		src.throw_impact(A)
-		src.throwing = 0
+	if(src.throw_2ing)
+		src.throw_2_impact(A)
+		src.throw_2ing = 0
 
 	spawn( 0 )
 		if ((A && yes))
@@ -45,28 +45,28 @@
 	return 0
 
 /atom/movable/proc/hit_check(var/speed)
-	if(src.throwing)
+	if(src.throw_2ing)
 		for(var/atom/A in get_turf(src))
 			if(A == src) continue
 			if(istype(A,/mob/living))
 				if(A:lying) continue
-				src.throw_impact(A,speed)
-				if(src.throwing == 1)
-					src.throwing = 0
+				src.throw_2_impact(A,speed)
+				if(src.throw_2ing == 1)
+					src.throw_2ing = 0
 			if(isobj(A))
-				if(A.density && !A.throwpass)	// **TODO: Better behaviour for windows which are dense, but shouldn't always stop movement
-					src.throw_impact(A,speed)
-					src.throwing = 0
+				if(A.density && !A.throw_2pass)	// **TODO: Better behaviour for windows which are dense, but shouldn't always stop movement
+					src.throw_2_impact(A,speed)
+					src.throw_2ing = 0
 
-/atom/movable/proc/throw_at(atom/target, range, speed)
+/atom/movable/proc/throw_2_at(atom/target, range, speed)
 	if(!target || !src)	return 0
 	//use a modified version of Bresenham's algorithm to get from the atom's current position to that of the target
 
-	src.throwing = 1
+	src.throw_2ing = 1
 
 	if(usr)
 		if(HULK in usr.mutations)
-			src.throwing = 2 // really strong throw!
+			src.throw_2ing = 2 // really strong throw_2!
 
 	var/dist_x = abs(target.x - src.x)
 	var/dist_y = abs(target.y - src.y)
@@ -90,8 +90,8 @@
 
 
 
-		while(src && target &&((((src.x < target.x && dx == EAST) || (src.x > target.x && dx == WEST)) && dist_travelled < range) || (a && a.has_gravity == 0)  || istype(src.loc, /turf/space)) && src.throwing && istype(src.loc, /turf))
-			// only stop when we've gone the whole distance (or max throw range) and are on a non-space tile, or hit something, or hit the end of the map, or someone picks it up
+		while(src && target &&((((src.x < target.x && dx == EAST) || (src.x > target.x && dx == WEST)) && dist_travelled < range) || (a && a.has_gravity == 0)  || istype(src.loc, /turf/space)) && src.throw_2ing && istype(src.loc, /turf))
+			// only stop when we've gone the whole distance (or max throw_2 range) and are on a non-space tile, or hit something, or hit the end of the map, or someone picks it up
 			if(error < 0)
 				var/atom/step = get_step(src, dy)
 				if(!step) // going off the edge of the map makes get_step return null, don't let things go off the edge
@@ -119,8 +119,8 @@
 			a = get_area(src.loc)
 	else
 		var/error = dist_y/2 - dist_x
-		while(src && target &&((((src.y < target.y && dy == NORTH) || (src.y > target.y && dy == SOUTH)) && dist_travelled < range) || (a.has_gravity == 0)  || istype(src.loc, /turf/space)) && src.throwing && istype(src.loc, /turf))
-			// only stop when we've gone the whole distance (or max throw range) and are on a non-space tile, or hit something, or hit the end of the map, or someone picks it up
+		while(src && target &&((((src.y < target.y && dy == NORTH) || (src.y > target.y && dy == SOUTH)) && dist_travelled < range) || (a.has_gravity == 0)  || istype(src.loc, /turf/space)) && src.throw_2ing && istype(src.loc, /turf))
+			// only stop when we've gone the whole distance (or max throw_2 range) and are on a non-space tile, or hit something, or hit the end of the map, or someone picks it up
 			if(error < 0)
 				var/atom/step = get_step(src, dx)
 				if(!step) // going off the edge of the map makes get_step return null, don't let things go off the edge
@@ -148,9 +148,9 @@
 
 			a = get_area(src.loc)
 
-	//done throwing, either because it hit something or it finished moving
-	src.throwing = 0
-	if(isobj(src)) src.throw_impact(get_turf(src),speed)
+	//done throw_2ing, either because it hit something or it finished moving
+	src.throw_2ing = 0
+	if(isobj(src)) src.throw_2_impact(get_turf(src),speed)
 
 
 //Overlays

@@ -475,7 +475,7 @@
 		..()
 		reagents.add_reagent("nutriment", 1)
 
-	throw_impact(atom/hit_atom)
+	throw_2_impact(atom/hit_atom)
 		..()
 		new/obj/effect/decal/cleanable/egg_smudge(src.loc)
 		src.reagents.reaction(hit_atom, TOUCH)
@@ -953,7 +953,7 @@
 	reagents.add_reagent("banana",5)
 	bitesize = 3
 
-/obj/item/weapon/reagent_containers/food/snacks/pie/throw_impact(atom/hit_atom)
+/obj/item/weapon/reagent_containers/food/snacks/pie/throw_2_impact(atom/hit_atom)
 	..()
 	new/obj/effect/decal/cleanable/pie_smudge(src.loc)
 	src.visible_message("\red [src.name] splats.","\red You hear a splat.")
@@ -2972,7 +2972,7 @@
 		playsound(src.loc, "squish.ogg", 40, 1)
 		del(src)
 */
-	throw_impact(atom/hit_atom)
+	throw_2_impact(atom/hit_atom)
 		..()
 		if(reagents.total_volume)
 			if(ismob(hit_atom))

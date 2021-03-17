@@ -176,7 +176,7 @@
 
 	else if (emagged && (turtle >= 4))
 		var/boomamt = rand(5,10)
-		src.temp = "[src.enemy_name] throws a bomb, exploding you for [boomamt] damage!"
+		src.temp = "[src.enemy_name] throw_2s a bomb, exploding you for [boomamt] damage!"
 		src.player_hp -= boomamt
 
 	else if ((src.enemy_mp <= 5) && (prob(70)))

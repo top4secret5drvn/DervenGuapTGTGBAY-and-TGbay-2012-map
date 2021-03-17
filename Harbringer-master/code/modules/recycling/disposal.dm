@@ -450,13 +450,13 @@
 				AM.pipe_eject(0)
 				spawn(1)
 					if(AM)
-						AM.throw_at(target, 5, 1)
+						AM.throw_2_at(target, 5, 1)
 
 			H.vent_gas(loc)
 			del(H)
 
 	CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
-		if (istype(mover,/obj/item) && mover.throwing)
+		if (istype(mover,/obj/item) && mover.throw_2ing)
 			var/obj/item/I = mover
 			if(istype(I, /obj/item/projectile))
 				return
@@ -728,7 +728,7 @@
 			F.burnt	= 1
 			F.intact	= 0
 			F.levelupdate()
-			new /obj/item/stack/tile(H)	// add to holder so it will be thrown with other stuff
+			new /obj/item/stack/tile(H)	// add to holder so it will be throw_2n with other stuff
 			F.icon_state = "Floor[F.burnt ? "1" : ""]"
 
 		if(direction)		// direction is specified
@@ -744,11 +744,11 @@
 					AM.pipe_eject(direction)
 					spawn(1)
 						if(AM)
-							AM.throw_at(target, 100, 1)
+							AM.throw_2_at(target, 100, 1)
 				H.vent_gas(T)
 				del(H)
 
-		else	// no specified direction, so throw in random direction
+		else	// no specified direction, so throw_2 in random direction
 
 			playsound(src, 'sound/machines/hiss.ogg', 50, 0, 0)
 			if(H)
@@ -759,7 +759,7 @@
 					AM.pipe_eject(0)
 					spawn(1)
 						if(AM)
-							AM.throw_at(target, 5, 1)
+							AM.throw_2_at(target, 5, 1)
 
 				H.vent_gas(T)	// all gas vent to turf
 				del(H)
@@ -1344,7 +1344,7 @@
 	density = 1
 	anchored = 1
 	var/active = 0
-	var/turf/target	// this will be where the output objects are 'thrown' to.
+	var/turf/target	// this will be where the output objects are 'throw_2n' to.
 	var/mode = 0
 
 	New()
@@ -1372,7 +1372,7 @@
 				AM.loc = src.loc
 				AM.pipe_eject(dir)
 				spawn(5)
-					AM.throw_at(target, 3, 1)
+					AM.throw_2_at(target, 3, 1)
 			H.vent_gas(src.loc)
 			del(H)
 

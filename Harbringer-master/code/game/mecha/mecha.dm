@@ -487,8 +487,8 @@
 			M.take_organ_damage(10)
 	else if(istype(A, /obj))
 		var/obj/O = A
-		if(O.throwforce)
-			src.take_damage(O.throwforce)
+		if(O.throw_2force)
+			src.take_damage(O.throw_2force)
 			src.check_for_internal_damage(list(MECHA_INT_TEMP_CONTROL,MECHA_INT_TANK_BREACH,MECHA_INT_CONTROL_LOST))
 	return
 

@@ -22,7 +22,7 @@
 	flags = FPRINT | TABLEPASS| CONDUCT
 	slot_flags = SLOT_BELT
 	force = 7.0
-	throwforce = 7.0
+	throw_2force = 7.0
 	w_class = 2.0
 	m_amt = 150
 	origin_tech = "materials=1;engineering=1"
@@ -41,9 +41,9 @@
 	slot_flags = SLOT_BELT
 	force = 7.0
 	w_class = 1.0
-	throwforce = 5.0
-	throw_speed = 3
-	throw_range = 5
+	throw_2force = 5.0
+	throw_2_speed = 3
+	throw_2_range = 5
 	sharp = 1
 	g_amt = 0
 	m_amt = 75
@@ -103,8 +103,8 @@
 	flags = FPRINT | TABLEPASS| CONDUCT
 	slot_flags = SLOT_BELT
 	force = 8.0
-	throw_speed = 2
-	throw_range = 9
+	throw_2_speed = 2
+	throw_2_range = 9
 	w_class = 2.0
 	m_amt = 80
 	origin_tech = "materials=1;engineering=1"
@@ -136,11 +136,11 @@
 	flags = FPRINT | TABLEPASS| CONDUCT
 	slot_flags = SLOT_BELT
 
-	//Amount of OUCH when it's thrown
+	//Amount of OUCH when it's throw_2n
 	force = 5.0
-	throwforce = 5.0
-	throw_speed = 1
-	throw_range = 5
+	throw_2force = 5.0
+	throw_2_speed = 1
+	throw_2_range = 5
 	w_class = 2.0
 
 	//Cost to make in the autolathe
@@ -152,7 +152,7 @@
 
 	//Welding tool specific stuff
 	var/welding = 0 	//Whether or not the welding tool is off(0), on(1) or currently welding(2)
-	var/status = 1 		//Whether the welder is secured or unsecured (able to attach rods to it to make a flamethrower)
+	var/status = 1 		//Whether the welder is secured or unsecured (able to attach rods to it to make a flamethrow_2er)
 	var/max_fuel = 20 	//The max amount of fuel the welder can hold
 
 /obj/item/weapon/weldingtool/New()
@@ -186,7 +186,7 @@
 	if((!status) && (istype(W,/obj/item/stack/rods)))
 		var/obj/item/stack/rods/R = W
 		R.use(1)
-		var/obj/item/weapon/flamethrower/F = new/obj/item/weapon/flamethrower(user.loc)
+		var/obj/item/weapon/flamethrow_2er/F = new/obj/item/weapon/flamethrow_2er(user.loc)
 		src.loc = F
 		F.weldtool = src
 		if (user.client)
@@ -442,7 +442,7 @@
 	flags = FPRINT | TABLEPASS| CONDUCT
 	slot_flags = SLOT_BELT
 	force = 5.0
-	throwforce = 7.0
+	throw_2force = 7.0
 	item_state = "crowbar"
 	w_class = 2.0
 	m_amt = 50

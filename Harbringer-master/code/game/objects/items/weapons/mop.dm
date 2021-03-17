@@ -4,9 +4,9 @@
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "mop"
 	force = 6.0
-	throwforce = 10.0
-	throw_speed = 5
-	throw_range = 10
+	throw_2force = 10.0
+	throw_2_speed = 5
+	throw_2_range = 10
 	w_class = 3.0
 	flags = FPRINT | TABLEPASS
 	attack_verb = list("mopped", "bashed", "bludgeoned", "whacked")

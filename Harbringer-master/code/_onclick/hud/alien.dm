@@ -187,11 +187,11 @@
 	src.adding += using
 
 
-	mymob.throw_icon = new /obj/screen()
-	mymob.throw_icon.icon = 'icons/mob/screen1_alien.dmi'
-	mymob.throw_icon.icon_state = "act_throw_off"
-	mymob.throw_icon.name = "throw"
-	mymob.throw_icon.screen_loc = ui_drop_throw
+	mymob.throw_2_icon = new /obj/screen()
+	mymob.throw_2_icon.icon = 'icons/mob/screen1_alien.dmi'
+	mymob.throw_2_icon.icon_state = "act_throw_2_off"
+	mymob.throw_2_icon.name = "throw_2"
+	mymob.throw_2_icon.screen_loc = ui_drop_throw_2
 
 	mymob.oxygen = new /obj/screen()
 	mymob.oxygen.icon = 'icons/mob/screen1_alien.dmi'
@@ -244,5 +244,5 @@
 
 	mymob.client.screen = null
 
-	mymob.client.screen += list( mymob.throw_icon, mymob.zone_sel, mymob.oxygen, mymob.toxin, mymob.fire, mymob.healths, mymob.pullin, mymob.blind, mymob.flash) //, mymob.hands, mymob.rest, mymob.sleep, mymob.mach )
+	mymob.client.screen += list( mymob.throw_2_icon, mymob.zone_sel, mymob.oxygen, mymob.toxin, mymob.fire, mymob.healths, mymob.pullin, mymob.blind, mymob.flash) //, mymob.hands, mymob.rest, mymob.sleep, mymob.mach )
 	mymob.client.screen += src.adding + src.other

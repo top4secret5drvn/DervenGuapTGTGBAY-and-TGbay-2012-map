@@ -33,7 +33,7 @@
 /obj/item/clothing/ears
 	name = "ears"
 	w_class = 1.0
-	throwforce = 2
+	throw_2force = 2
 	slot_flags = SLOT_EARS
 
 /obj/item/clothing/ears/attack_hand(mob/user as mob)

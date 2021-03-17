@@ -6,9 +6,9 @@
 	flags = FPRINT | TABLEPASS| CONDUCT
 	w_class = 3.0
 	force = 13.0
-	throwforce = 15.0
-	throw_speed = 5
-	throw_range = 20
+	throw_2force = 15.0
+	throw_2_speed = 5
+	throw_2_range = 20
 	m_amt = 1875
 	max_amount = 60
 	attack_verb = list("hit", "bludgeoned", "whacked")

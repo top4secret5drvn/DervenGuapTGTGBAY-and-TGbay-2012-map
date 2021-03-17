@@ -157,7 +157,7 @@ This could be a lot better but I'm too tired atm.*/
 	var/C = 80
 	if(!ninjacost(C,1))
 		var/mob/living/carbon/human/U = affecting
-		var/targets[] = list()//So yo can shoot while yo throw dawg
+		var/targets[] = list()//So yo can shoot while yo throw_2 dawg
 		for(var/mob/living/M in oview(loc))
 			if(M.stat)	continue//Doesn't target corpses or paralyzed persons.
 			targets.Add(M)

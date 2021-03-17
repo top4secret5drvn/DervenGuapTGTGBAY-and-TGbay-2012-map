@@ -4,10 +4,10 @@
 	icon_state = "latexballon"
 	item_state = "lgloves"
 	force = 0
-	throwforce = 0
+	throw_2force = 0
 	w_class = 1.0
-	throw_speed = 1
-	throw_range = 15
+	throw_2_speed = 1
+	throw_2_range = 15
 	var/state
 	var/datum/gas_mixture/air_contents = null
 

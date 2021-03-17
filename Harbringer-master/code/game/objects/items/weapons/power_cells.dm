@@ -7,9 +7,9 @@
 	origin_tech = "powerstorage=1"
 	flags = FPRINT|TABLEPASS
 	force = 6.0
-	throwforce = 5.0
-	throw_speed = 3
-	throw_range = 5
+	throw_2force = 5.0
+	throw_2_speed = 3
+	throw_2_range = 5
 	w_class = 3.0
 	var/charge = 0	// note %age conveted to actual charge in New
 	var/maxcharge = 1000

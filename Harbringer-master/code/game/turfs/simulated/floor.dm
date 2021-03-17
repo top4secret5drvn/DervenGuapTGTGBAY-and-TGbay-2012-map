@@ -160,7 +160,7 @@ turf/simulated/floor/proc/update_icon()
 				icon_state = "wood"
 				//world << "[icon_state]y's got [icon_state]"
 	/*spawn(1)
-		if(istype(src,/turf/simulated/floor)) //Was throwing runtime errors due to a chance of it changing to space halfway through.
+		if(istype(src,/turf/simulated/floor)) //Was throw_2ing runtime errors due to a chance of it changing to space halfway through.
 			if(air)
 				update_visuals(air)*/
 

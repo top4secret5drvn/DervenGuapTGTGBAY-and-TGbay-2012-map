@@ -91,9 +91,9 @@
 				return
 		}
 
-	// ------- THROW -------
-	if(usr.in_throw_mode)
-		return usr:throw_item(src)
+	// ------- throw_2 -------
+	if(usr.in_throw_2_mode)
+		return usr:throw_2_item(src)
 
 	// ------- ITEM IN HAND DEFINED -------
 	var/obj/item/W = usr.get_active_hand()

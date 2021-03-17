@@ -88,7 +88,7 @@
 	icon_type = "candle"
 	item_state = "candlebox5"
 	storage_slots = 5
-	throwforce = 2
+	throw_2force = 2
 	flags = TABLEPASS
 	slot_flags = SLOT_BELT
 
@@ -152,7 +152,7 @@
 	icon_state = "cigpacket"
 	item_state = "cigpacket"
 	w_class = 1
-	throwforce = 2
+	throw_2force = 2
 	flags = TABLEPASS
 	slot_flags = SLOT_BELT
 	storage_slots = 6

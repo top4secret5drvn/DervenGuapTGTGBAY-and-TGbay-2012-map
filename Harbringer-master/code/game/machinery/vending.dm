@@ -469,7 +469,7 @@
 		src.last_slogan = world.time
 
 	if(src.shoot_inventory && prob(2))
-		src.throw_item()
+		src.throw_2_item()
 
 	return
 
@@ -515,8 +515,8 @@
 	return
 
 //Somebody cut an important wire and now we're following a new definition of "pitch."
-/obj/machinery/vending/proc/throw_item()
-	var/obj/throw_item = null
+/obj/machinery/vending/proc/throw_2_item()
+	var/obj/throw_2_item = null
 	var/mob/living/target = locate() in view(7,src)
 	if(!target)
 		return 0
@@ -529,13 +529,13 @@
 			continue
 
 		R.amount--
-		throw_item = new dump_path(src.loc)
+		throw_2_item = new dump_path(src.loc)
 		break
-	if (!throw_item)
+	if (!throw_2_item)
 		return 0
 	spawn(0)
-		throw_item.throw_at(target, 16, 3)
-	src.visible_message("\red <b>[src] launches [throw_item.name] at [target.name]!</b>")
+		throw_2_item.throw_2_at(target, 16, 3)
+	src.visible_message("\red <b>[src] launches [throw_2_item.name] at [target.name]!</b>")
 	return 1
 
 /obj/machinery/vending/proc/isWireColorCut(var/wireColor)

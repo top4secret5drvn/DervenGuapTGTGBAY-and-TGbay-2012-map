@@ -5,9 +5,9 @@
 	icon_state = "red_phone"
 	flags = FPRINT | TABLEPASS | CONDUCT
 	force = 3.0
-	throwforce = 2.0
-	throw_speed = 1
-	throw_range = 4
+	throw_2force = 2.0
+	throw_2_speed = 1
+	throw_2_range = 4
 	w_class = 2
 	attack_verb = list("called", "rang")
 	hitsound = 'sound/weapons/ring.ogg'
@@ -32,9 +32,9 @@
 	icon_state = "banana_peel"
 	item_state = "banana_peel"
 	w_class = 1.0
-	throwforce = 0
-	throw_speed = 4
-	throw_range = 20
+	throw_2force = 0
+	throw_2_speed = 4
+	throw_2_range = 20
 
 /obj/item/weapon/corncob
 	name = "corn cob"
@@ -43,9 +43,9 @@
 	icon_state = "corncob"
 	item_state = "corncob"
 	w_class = 1.0
-	throwforce = 0
-	throw_speed = 4
-	throw_range = 20
+	throw_2force = 0
+	throw_2_speed = 4
+	throw_2_range = 20
 
 /obj/item/weapon/soap
 	name = "soap"
@@ -54,9 +54,9 @@
 	icon = 'icons/obj/items.dmi'
 	icon_state = "soap"
 	w_class = 1.0
-	throwforce = 0
-	throw_speed = 4
-	throw_range = 20
+	throw_2force = 0
+	throw_2_speed = 4
+	throw_2_range = 20
 
 /obj/item/weapon/soap/nanotrasen
 	desc = "A Nanotrasen brand bar of soap. Smells of plasma."
@@ -76,10 +76,10 @@
 	icon = 'icons/obj/items.dmi'
 	icon_state = "bike_horn"
 	item_state = "bike_horn"
-	throwforce = 3
+	throw_2force = 3
 	w_class = 1.0
-	throw_speed = 3
-	throw_range = 15
+	throw_2_speed = 3
+	throw_2_range = 15
 	attack_verb = list("HONKED")
 	var/spam_flag = 0
 
@@ -89,10 +89,10 @@
 	desc = "A tube... of cardboard."
 	icon = 'icons/obj/items.dmi'
 	icon_state = "c_tube"
-	throwforce = 1
+	throw_2force = 1
 	w_class = 1.0
-	throw_speed = 4
-	throw_range = 5
+	throw_2_speed = 4
+	throw_2_range = 5
 
 
 /obj/item/weapon/cane
@@ -103,7 +103,7 @@
 	item_state = "stick"
 	flags = FPRINT | TABLEPASS| CONDUCT
 	force = 5.0
-	throwforce = 7.0
+	throw_2force = 7.0
 	w_class = 2.0
 	m_amt = 50
 	attack_verb = list("bludgeoned", "whacked", "disciplined", "thrashed")
@@ -149,15 +149,15 @@
 	icon = 'icons/obj/items.dmi'
 	icon_state = "handcuff"
 	flags = FPRINT | TABLEPASS | CONDUCT
-	throwforce = 0
+	throw_2force = 0
 	w_class = 3.0
 	origin_tech = "materials=1"
 	var/breakouttime = 300	//Deciseconds = 30s = 0.5 minute
 
 /obj/item/weapon/legcuffs/beartrap
 	name = "bear trap"
-	throw_speed = 2
-	throw_range = 1
+	throw_2_speed = 2
+	throw_2_range = 1
 	icon_state = "beartrap0"
 	desc = "A trap used to catch bears and other legged creatures."
 	var/armed = 0
@@ -202,9 +202,9 @@
 	icon = 'icons/obj/janitor.dmi'
 	icon_state = "caution"
 	force = 1.0
-	throwforce = 3.0
-	throw_speed = 1
-	throw_range = 5
+	throw_2force = 3.0
+	throw_2_speed = 1
+	throw_2_range = 5
 	w_class = 2.0
 	flags = FPRINT | TABLEPASS
 	attack_verb = list("warned", "cautioned", "smashed")
@@ -227,10 +227,10 @@
 	icon = 'icons/obj/shards.dmi'
 	icon_state = "large"
 	sharp = 1
-	desc = "Could probably be used as ... a throwing weapon?"
+	desc = "Could probably be used as ... a throw_2ing weapon?"
 	w_class = 1.0
 	force = 5.0
-	throwforce = 8.0
+	throw_2force = 8.0
 	item_state = "shard-glass"
 	g_amt = 3750
 	attack_verb = list("slashed", "sliced", "cut")
@@ -258,8 +258,8 @@
 	flags = FPRINT | TABLEPASS | CONDUCT | ONBELT
 	w_class = 2.0
 	item_state = "radio"
-	throw_speed = 4
-	throw_range = 20
+	throw_2_speed = 4
+	throw_2_range = 20
 	m_amt = 100
 	origin_tech = "magnets=2;syndicate=3"*/
 
@@ -298,10 +298,10 @@
 	flags = FPRINT | TABLEPASS| CONDUCT
 	slot_flags = SLOT_BELT
 	item_state = "radio"
-	throwforce = 5
+	throw_2force = 5
 	w_class = 2.0
-	throw_speed = 4
-	throw_range = 20
+	throw_2_speed = 4
+	throw_2_range = 20
 	m_amt = 100
 	origin_tech = "magnets=1"
 
@@ -311,9 +311,9 @@
 	icon = 'icons/obj/wizard.dmi'
 	icon_state = "staff"
 	force = 3.0
-	throwforce = 5.0
-	throw_speed = 1
-	throw_range = 5
+	throw_2force = 5.0
+	throw_2_speed = 1
+	throw_2_range = 5
 	w_class = 2.0
 	flags = FPRINT | TABLEPASS | NOSHIELD
 	attack_verb = list("bludgeoned", "whacked", "disciplined")
@@ -338,9 +338,9 @@
 	icon_state = "stick"
 	item_state = "stick"
 	force = 3.0
-	throwforce = 5.0
-	throw_speed = 1
-	throw_range = 5
+	throw_2force = 5.0
+	throw_2_speed = 1
+	throw_2_range = 5
 	w_class = 2.0
 	flags = FPRINT | TABLEPASS | NOSHIELD
 
@@ -425,8 +425,8 @@
 	icon_state = "flash"
 	w_class = 1.0
 	item_state = "electronic"
-	throw_speed = 4
-	throw_range = 20
+	throw_2_speed = 4
+	throw_2_range = 20
 
 /obj/item/weapon/camera_bug/attack_self(mob/usr as mob)
 	var/list/cameras = new/list()
@@ -471,9 +471,9 @@
 	flags = FPRINT | TABLEPASS | CONDUCT
 	force = 12.0
 	w_class = 2.0
-	throwforce = 15.0
-	throw_speed = 4
-	throw_range = 4
+	throw_2force = 15.0
+	throw_2_speed = 4
+	throw_2_range = 4
 	m_amt = 15000
 	origin_tech = "materials=2;combat=1"
 	attack_verb = list("chopped", "torn", "cut")
@@ -494,9 +494,9 @@
 	name = "scythe"
 	desc = "A sharp and curved blade on a long fibremetal handle, this tool makes it easy to reap what you sow."
 	force = 13.0
-	throwforce = 5.0
-	throw_speed = 1
-	throw_range = 3
+	throw_2force = 5.0
+	throw_2_speed = 1
+	throw_2_range = 3
 	w_class = 4.0
 	flags = FPRINT | TABLEPASS | NOSHIELD
 	slot_flags = SLOT_BACK
@@ -519,7 +519,7 @@
 	icon_state = "cigarpacket"
 	item_state = "cigarpacket"
 	w_class = 1
-	throwforce = 2
+	throw_2force = 2
 	var/cigarcount = 6
 	flags = ONBELT | TABLEPASS */
 

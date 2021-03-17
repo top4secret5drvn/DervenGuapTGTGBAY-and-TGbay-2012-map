@@ -5,7 +5,7 @@
 	icon_state = "s-casing"
 	flags = FPRINT | CONDUCT
 	slot_flags = SLOT_BELT
-	throwforce = 1
+	throw_2force = 1
 	w_class = 1.0
 	var/caliber = ""					//Which kind of guns it can be loaded into
 	var/projectile_type					//The bullet type to create when New() is called
@@ -37,10 +37,10 @@
 	slot_flags = SLOT_BELT
 	item_state = "syringe_kit"
 	m_amt = 50000
-	throwforce = 2
+	throw_2force = 2
 	w_class = 1.0
-	throw_speed = 4
-	throw_range = 10
+	throw_2_speed = 4
+	throw_2_range = 10
 	var/caliber
 	var/list/stored_ammo = list()
 	var/ammo_type = /obj/item/ammo_casing

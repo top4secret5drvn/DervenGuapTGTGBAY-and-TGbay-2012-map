@@ -3,10 +3,10 @@
 	icon = 'icons/obj/bureaucracy.dmi'
 	icon_state = "paper_bin1"
 	item_state = "sheet-metal"
-	throwforce = 1
+	throw_2force = 1
 	w_class = 3
-	throw_speed = 3
-	throw_range = 7
+	throw_2_speed = 3
+	throw_2_range = 7
 	pressure_resistance = 10
 	var/amount = 30					//How much paper is in the bin.
 	var/list/papers = new/list()	//List of papers put in the bin for reference.

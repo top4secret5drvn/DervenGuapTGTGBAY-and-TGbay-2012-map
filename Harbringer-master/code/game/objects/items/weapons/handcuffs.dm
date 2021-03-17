@@ -6,10 +6,10 @@
 	icon_state = "handcuff"
 	flags = FPRINT | TABLEPASS | CONDUCT
 	slot_flags = SLOT_BELT
-	throwforce = 5
+	throw_2force = 5
 	w_class = 2.0
-	throw_speed = 2
-	throw_range = 5
+	throw_2_speed = 2
+	throw_2_range = 5
 	m_amt = 500
 	origin_tech = "materials=1"
 	var/dispenser = 0

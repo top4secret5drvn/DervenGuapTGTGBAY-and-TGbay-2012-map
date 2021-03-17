@@ -3,10 +3,10 @@
 	desc = "Used for blinding and being an asshole."
 	icon_state = "flash"
 	item_state = "flashbang"	//looks exactly like a flash (and nothing like a flashbang)
-	throwforce = 5
+	throw_2force = 5
 	w_class = 1.0
-	throw_speed = 4
-	throw_range = 10
+	throw_2_speed = 4
+	throw_2_range = 10
 	flags = FPRINT | TABLEPASS| CONDUCT
 	origin_tech = "magnets=2;combat=1"
 

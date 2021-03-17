@@ -135,7 +135,7 @@
 	layer = 2.0
 	var/obj/structure/morgue/connected = null
 	anchored = 1
-	throwpass = 1
+	throw_2pass = 1
 
 /obj/structure/m_tray/attack_paw(mob/user as mob)
 	return src.attack_hand(user)
@@ -351,7 +351,7 @@
 	layer = 2.0
 	var/obj/structure/crematorium/connected = null
 	anchored = 1
-	throwpass = 1
+	throw_2pass = 1
 
 /obj/structure/c_tray/attack_paw(mob/user as mob)
 	return src.attack_hand(user)

@@ -416,7 +416,7 @@
 	density = 1
 	anchored = 1.0
 	layer = 2.8
-	throwpass = 1	//You can throw objects over this, despite it's density.
+	throw_2pass = 1	//You can throw_2 objects over this, despite it's density.
 
 
 /obj/structure/table/holotable/attack_paw(mob/user as mob)
@@ -555,9 +555,9 @@
 	desc = "May the force be within you. Sorta"
 	icon_state = "sword0"
 	force = 3.0
-	throw_speed = 1
-	throw_range = 5
-	throwforce = 0
+	throw_2_speed = 1
+	throw_2_range = 5
+	throw_2force = 0
 	w_class = 2.0
 	flags = FPRINT | TABLEPASS | NOSHIELD
 	var/active = 0
@@ -621,7 +621,7 @@
 	icon_state = "hoop"
 	anchored = 1
 	density = 1
-	throwpass = 1
+	throw_2pass = 1
 
 /obj/structure/holohoop/attackby(obj/item/weapon/W as obj, mob/user as mob)
 	if (istype(W, /obj/item/weapon/grab) && get_dist(src,user)<2)
@@ -640,7 +640,7 @@
 		return
 
 /obj/structure/holohoop/CanPass(atom/movable/mover, turf/target, height=0, air_group=0)
-	if (istype(mover,/obj/item) && mover.throwing)
+	if (istype(mover,/obj/item) && mover.throw_2ing)
 		var/obj/item/I = mover
 		if(istype(I, /obj/item/projectile))
 			return

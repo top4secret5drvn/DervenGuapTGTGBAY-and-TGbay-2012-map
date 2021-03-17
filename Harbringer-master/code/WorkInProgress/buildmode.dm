@@ -93,7 +93,7 @@
 			if(4)
 				usr << "\blue ***********************************************************"
 				usr << "\blue Left Mouse Button on turf/obj/mob      = Select"
-				usr << "\blue Right Mouse Button on turf/obj/mob     = Throw"
+				usr << "\blue Right Mouse Button on turf/obj/mob     = throw_2"
 				usr << "\blue ***********************************************************"
 		return 1
 
@@ -113,7 +113,7 @@
 	var/obj/effect/bmode/buildhelp/buildhelp = null
 	var/obj/effect/bmode/buildmode/buildmode = null
 	var/obj/effect/bmode/buildquit/buildquit = null
-	var/atom/movable/throw_atom = null
+	var/atom/movable/throw_2_atom = null
 
 /obj/effect/bmode/buildmode
 	icon_state = "buildmode1"
@@ -259,8 +259,8 @@
 
 		if(4)
 			if(pa.Find("left"))
-				holder.throw_atom = object
+				holder.throw_2_atom = object
 			if(pa.Find("right"))
-				if(holder.throw_atom)
-					holder.throw_atom.throw_at(object, 10, 1)
+				if(holder.throw_2_atom)
+					holder.throw_2_atom.throw_2_at(object, 10, 1)
 

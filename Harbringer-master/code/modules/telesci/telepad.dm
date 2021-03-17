@@ -70,9 +70,9 @@
 	icon_state = "rcs"
 	flags = FPRINT | TABLEPASS| CONDUCT
 	force = 10.0
-	throwforce = 10.0
-	throw_speed = 1
-	throw_range = 5
+	throw_2force = 10.0
+	throw_2_speed = 1
+	throw_2_range = 5
 	var/rcharges = 10
 	var/obj/machinery/pad = null
 	var/last_charge = 30

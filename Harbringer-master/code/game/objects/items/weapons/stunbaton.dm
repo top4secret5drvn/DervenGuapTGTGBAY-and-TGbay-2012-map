@@ -6,11 +6,11 @@
 	flags = FPRINT | TABLEPASS
 	slot_flags = SLOT_BELT
 	force = 15
-	throwforce = 7
+	throw_2force = 7
 	w_class = 3
 	var/charges = 10
 	var/status = 0
-	var/mob/foundmob = "" //Used in throwing proc.
+	var/mob/foundmob = "" //Used in throw_2ing proc.
 
 	origin_tech = "combat=2"
 
@@ -97,7 +97,7 @@
 
 	add_fingerprint(user)
 
-/obj/item/weapon/melee/baton/throw_impact(atom/hit_atom)
+/obj/item/weapon/melee/baton/throw_2_impact(atom/hit_atom)
 	. = ..()
 	if (prob(50))
 		if(istype(hit_atom, /mob/living))
@@ -112,9 +112,9 @@
 					foundmob = M
 					break
 
-				H.visible_message("<span class='danger'>[src], thrown by [foundmob.name], strikes [H] and stuns them!</span>")
+				H.visible_message("<span class='danger'>[src], throw_2n by [foundmob.name], strikes [H] and stuns them!</span>")
 
-				H.attack_log += "\[[time_stamp()]\]<font color='orange'> Stunned by thrown [src.name] last touched by ([src.fingerprintslast])</font>"
+				H.attack_log += "\[[time_stamp()]\]<font color='orange'> Stunned by throw_2n [src.name] last touched by ([src.fingerprintslast])</font>"
 				log_attack("Flying [src.name], last touched by ([src.fingerprintslast]) stunned [H.name] ([H.ckey])" )
 
 /obj/item/weapon/melee/baton/emp_act(severity)

@@ -13,9 +13,9 @@
 
 
 /obj/item/toy
-	throwforce = 0
-	throw_speed = 4
-	throw_range = 20
+	throw_2force = 0
+	throw_2_speed = 4
+	throw_2_range = 20
 	force = 0
 
 
@@ -63,7 +63,7 @@
 	src.update_icon()
 	return
 
-/obj/item/toy/balloon/throw_impact(atom/hit_atom)
+/obj/item/toy/balloon/throw_2_impact(atom/hit_atom)
 	if(src.reagents.total_volume >= 1)
 		src.visible_message("\red The [src] bursts!","You hear a pop and a splash.")
 		src.reagents.reaction(get_turf(hit_atom))
@@ -86,9 +86,9 @@
 /obj/item/toy/syndicateballoon
 	name = "syndicate balloon"
 	desc = "There is a tag on the back that reads \"FUK NT!11!\"."
-	throwforce = 0
-	throw_speed = 4
-	throw_range = 20
+	throw_2force = 0
+	throw_2_speed = 4
+	throw_2_range = 20
 	force = 0
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "syndballoon"
@@ -355,7 +355,7 @@
 	flags = FPRINT | TABLEPASS | CONDUCT
 	slot_flags = SLOT_BELT | SLOT_BACK
 	force = 5
-	throwforce = 5
+	throw_2force = 5
 	w_class = 3
 	attack_verb = list("attacked", "slashed", "sliced")
 
@@ -390,7 +390,7 @@
 	icon_state = "snappop"
 	w_class = 1
 
-	throw_impact(atom/hit_atom)
+	throw_2_impact(atom/hit_atom)
 		..()
 		var/datum/effect/effect/system/spark_spread/s = new /datum/effect/effect/system/spark_spread
 		s.set_up(3, 1, src)
@@ -573,7 +573,7 @@
 	flags = FPRINT | TABLEPASS | CONDUCT
 	slot_flags = SLOT_BELT | SLOT_BACK
 	force = 5
-	throwforce = 5
+	throw_2force = 5
 	w_class = 3
 	attack_verb = list("attacked", "slashed", "sliced")
 

@@ -184,10 +184,10 @@
 				return
 			else
 				var/atom/target = get_edge_target_turf(src, get_dir(src, get_step_away(src, src)))
-				throw_at(target, 200, 4)
+				throw_2_at(target, 200, 4)
 			//return
 //				var/atom/target = get_edge_target_turf(user, get_dir(src, get_step_away(user, src)))
-				//user.throw_at(target, 200, 4)
+				//user.throw_2_at(target, 200, 4)
 
 		if (2.0)
 			if (!shielded)
@@ -849,11 +849,11 @@
 		lastpuke = 1
 		src << "<spawn class='warning'>You feel nauseous..."
 		spawn(150)	//15 seconds until second warning
-			src << "<spawn class='warning'>You feel like you are about to throw up!"
+			src << "<spawn class='warning'>You feel like you are about to throw_2 up!"
 			spawn(100)	//and you have 10 more for mad dash to the bucket
 				Stun(5)
 
-				src.visible_message("<spawn class='warning'>[src] throws up!","<spawn class='warning'>You throw up!")
+				src.visible_message("<spawn class='warning'>[src] throw_2s up!","<spawn class='warning'>You throw_2 up!")
 				playsound(loc, 'sound/effects/splat.ogg', 50, 1)
 
 				var/turf/location = loc

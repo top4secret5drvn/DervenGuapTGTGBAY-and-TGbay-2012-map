@@ -190,16 +190,16 @@ var/prison_shuttle_timeleft = 0
 				var/area/end_location = locate(/area/shuttle/prison/station)
 
 				var/list/dstturfs = list()
-				var/throwy = world.maxy
+				var/throw_2y = world.maxy
 
 				for(var/turf/T in end_location)
 					dstturfs += T
-					if(T.y < throwy)
-						throwy = T.y
+					if(T.y < throw_2y)
+						throw_2y = T.y
 							// hey you, get out of the way!
 				for(var/turf/T in dstturfs)
 								// find the turf to move things to
-					var/turf/D = locate(T.x, throwy - 1, 1)
+					var/turf/D = locate(T.x, throw_2y - 1, 1)
 								//var/turf/E = get_step(D, SOUTH)
 					for(var/atom/movable/AM as mob|obj in T)
 						AM.Move(D)
@@ -223,17 +223,17 @@ var/prison_shuttle_timeleft = 0
 				var/area/end_location = locate(/area/shuttle/prison/prison)
 
 				var/list/dstturfs = list()
-				var/throwy = world.maxy
+				var/throw_2y = world.maxy
 
 				for(var/turf/T in end_location)
 					dstturfs += T
-					if(T.y < throwy)
-						throwy = T.y
+					if(T.y < throw_2y)
+						throw_2y = T.y
 
 							// hey you, get out of the way!
 				for(var/turf/T in dstturfs)
 								// find the turf to move things to
-					var/turf/D = locate(T.x, throwy - 1, 1)
+					var/turf/D = locate(T.x, throw_2y - 1, 1)
 								//var/turf/E = get_step(D, SOUTH)
 					for(var/atom/movable/AM as mob|obj in T)
 						AM.Move(D)

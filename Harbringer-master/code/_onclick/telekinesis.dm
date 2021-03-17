@@ -56,7 +56,7 @@ var/const/tk_maxrange = 15
 	TK Grab Item (the workhorse of old TK)
 
 	* If you have not grabbed something, do a normal tk attack
-	* If you have something, throw it at the target.  If it is already adjacent, do a normal attackby()
+	* If you have something, throw_2 it at the target.  If it is already adjacent, do a normal attackby()
 	* If you click what you are holding, or attack_self(), do an attack_self_tk() on it.
 	* Deletes itself if it is ever not in your hand, or if you should have no access to TK.
 */
@@ -70,7 +70,7 @@ var/const/tk_maxrange = 15
 	w_class = 10.0
 	layer = 20
 
-	var/last_throw = 0
+	var/last_throw_2 = 0
 	var/atom/movable/focus = null
 	var/mob/living/host = null
 
@@ -97,7 +97,7 @@ var/const/tk_maxrange = 15
 
 	afterattack(atom/target as mob|obj|turf|area, mob/living/user as mob|obj, proximity)//TODO: go over this
 		if(!target || !user)	return
-		if(last_throw+3 > world.time)	return
+		if(last_throw_2+3 > world.time)	return
 		if(!host || host != user)
 			del(src)
 			return
@@ -141,8 +141,8 @@ var/const/tk_maxrange = 15
 
 		else
 			apply_focus_overlay()
-			focus.throw_at(target, 10, 1)
-			last_throw = world.time
+			focus.throw_2_at(target, 10, 1)
+			last_throw_2 = world.time
 		return
 
 	attack(mob/living/M as mob, mob/living/user as mob, def_zone)
@@ -150,7 +150,7 @@ var/const/tk_maxrange = 15
 
 
 	proc/focus_object(var/obj/target, var/mob/living/user)
-		if(!istype(target,/obj))	return//Cant throw non objects atm might let it do mobs later
+		if(!istype(target,/obj))	return//Cant throw_2 non objects atm might let it do mobs later
 		if(target.anchored || !isturf(target.loc))
 			del src
 			return

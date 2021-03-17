@@ -177,7 +177,7 @@
 				return
 			else
 				var/atom/target = get_edge_target_turf(src, get_dir(src, get_step_away(src, src)))
-				throw_at(target, 200, 4)
+				throw_2_at(target, 200, 4)
 
 		if (2.0)
 			if (!shielded)

@@ -33,7 +33,7 @@
 
 
 proc
-	ul_Clamp(var/Value)
+	ul_clamp2(var/Value)
 		return min(max(Value, 0), ul_Steps)
 
 atom
@@ -250,11 +250,11 @@ turf
 	proc
 
 		ul_GetRed()
-			return ul_Clamp(min(LightLevelRed, max(MaxRed)))
+			return ul_clamp2(min(LightLevelRed, max(MaxRed)))
 		ul_GetGreen()
-			return ul_Clamp(min(LightLevelGreen, max(MaxGreen)))
+			return ul_clamp2(min(LightLevelGreen, max(MaxGreen)))
 		ul_GetBlue()
-			return ul_Clamp(min(LightLevelBlue, max(MaxBlue)))
+			return ul_clamp2(min(LightLevelBlue, max(MaxBlue)))
 
 		ul_UpdateLight()
 

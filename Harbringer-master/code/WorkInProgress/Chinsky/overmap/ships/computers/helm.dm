@@ -127,9 +127,9 @@
 				R.fields["y"] = linked.y
 			if("new")
 				var/newx = input("Input new entry x coordinate", "Coordinate input", linked.x) as num
-				R.fields["x"] = Clamp(newx, 1, world.maxx)
+				R.fields["x"] = clamp2(newx, 1, world.maxx)
 				var/newy = input("Input new entry y coordinate", "Coordinate input", linked.y) as num
-				R.fields["y"] = Clamp(newy, 1, world.maxy)
+				R.fields["y"] = clamp2(newy, 1, world.maxy)
 		known_sectors += R
 
 	if (href_list["remove"])
@@ -139,12 +139,12 @@
 	if (href_list["setx"])
 		var/newx = input("Input new destiniation x coordinate", "Coordinate input", dx) as num|null
 		if (newx)
-			dx = Clamp(newx, 1, world.maxx)
+			dx = clamp2(newx, 1, world.maxx)
 
 	if (href_list["sety"])
 		var/newy = input("Input new destiniation y coordinate", "Coordinate input", dy) as num|null
 		if (newy)
-			dy = Clamp(newy, 1, world.maxy)
+			dy = clamp2(newy, 1, world.maxy)
 
 	if (href_list["x"] && href_list["y"])
 		dx = text2num(href_list["x"])

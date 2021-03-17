@@ -15,9 +15,9 @@
 	var/list/timestamp = new/list()
 	var/canprint = 1
 	flags = FPRINT | TABLEPASS| CONDUCT
-	throwforce = 2
-	throw_speed = 4
-	throw_range = 20
+	throw_2force = 2
+	throw_2_speed = 4
+	throw_2_range = 20
 
 /obj/item/device/taperecorder/hear_talk(mob/living/M as mob, msg)
 	if(recording)

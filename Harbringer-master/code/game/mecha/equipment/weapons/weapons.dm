@@ -230,7 +230,7 @@
 	var/missile_range = 30
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/Fire(atom/movable/AM, atom/target, turf/aimloc)
-	AM.throw_at(target,missile_range, missile_speed)
+	AM.throw_2_at(target,missile_range, missile_speed)
 
 /obj/item/mecha_parts/mecha_equipment/weapon/ballistic/missile_rack/explosive
 	name = "SRM-8 Missile Rack"
@@ -250,9 +250,9 @@
 	icon = 'icons/obj/grenade.dmi'
 	icon_state = "missile"
 	var/primed = null
-	throwforce = 15
+	throw_2force = 15
 
-	throw_impact(atom/hit_atom)
+	throw_2_impact(atom/hit_atom)
 		if(primed)
 			explosion(hit_atom, 0, 0, 2, 4)
 			del(src)

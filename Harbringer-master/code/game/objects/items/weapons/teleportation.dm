@@ -19,8 +19,8 @@
 	flags = FPRINT | TABLEPASS| CONDUCT
 	w_class = 2.0
 	item_state = "electronic"
-	throw_speed = 4
-	throw_range = 20
+	throw_2_speed = 4
+	throw_2_range = 20
 	m_amt = 400
 	origin_tech = "magnets=1"
 
@@ -128,10 +128,10 @@ Frequency:
 	icon = 'icons/obj/device.dmi'
 	icon_state = "hand_tele"
 	item_state = "electronic"
-	throwforce = 5
+	throw_2force = 5
 	w_class = 2.0
-	throw_speed = 3
-	throw_range = 5
+	throw_2_speed = 3
+	throw_2_range = 5
 	m_amt = 10000
 	origin_tech = "magnets=1;bluespace=3"
 

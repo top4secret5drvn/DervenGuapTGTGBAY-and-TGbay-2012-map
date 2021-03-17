@@ -3,7 +3,7 @@
 	name = "plasma shard"
 	desc = "A shard of plasma glass. Considerably tougher then normal glass shards. Apparently not tough enough to be a window."
 	force = 8.0
-	throwforce = 15.0
+	throw_2force = 15.0
 	icon_state = "plasmalarge"
 /obj/item/weapon/shard/plasma/New()
 

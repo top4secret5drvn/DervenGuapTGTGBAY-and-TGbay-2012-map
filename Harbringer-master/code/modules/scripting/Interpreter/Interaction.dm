@@ -134,7 +134,7 @@
 
 /*
 	Event: HandleError
-	Called when the interpreter throws a runtime error.
+	Called when the interpreter throw_2s a runtime error.
 
 	See Also:
 	- <runtimeError>

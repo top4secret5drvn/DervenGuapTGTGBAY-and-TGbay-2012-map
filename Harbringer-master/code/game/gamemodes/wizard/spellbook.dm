@@ -3,8 +3,8 @@
 	desc = "The legendary book of spells of the wizard."
 	icon = 'icons/obj/library.dmi'
 	icon_state ="book"
-	throw_speed = 1
-	throw_range = 5
+	throw_2_speed = 1
+	throw_2_range = 5
 	w_class = 1.0
 	flags = FPRINT | TABLEPASS
 	var/uses = 5

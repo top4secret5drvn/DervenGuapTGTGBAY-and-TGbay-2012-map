@@ -74,8 +74,8 @@
 		RestrainedClickOn(A)
 		return
 
-	if(in_throw_mode)
-		throw_item(A)
+	if(in_throw_2_mode)
+		throw_2_item(A)
 		return
 
 	var/obj/item/W = get_active_hand()

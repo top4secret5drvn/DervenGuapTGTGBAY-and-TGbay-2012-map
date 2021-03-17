@@ -380,9 +380,9 @@ LOOK FOR SURGERY.DM*/
 	flags = FPRINT | TABLEPASS | CONDUCT
 	force = 15.0
 	w_class = 2.0
-	throwforce = 5.0
-	throw_speed = 3
-	throw_range = 5
+	throw_2force = 5.0
+	throw_2_speed = 3
+	throw_2_range = 5
 	m_amt = 10000
 	g_amt = 5000
 	origin_tech = "materials=1;biotech=1"
@@ -632,9 +632,9 @@ LOOK FOR SURGERY.DM*/
 	flags = FPRINT | TABLEPASS | CONDUCT
 	force = 20.0
 	w_class = 2.0
-	throwforce = 9.0
-	throw_speed = 3
-	throw_range = 5
+	throw_2force = 9.0
+	throw_2_speed = 3
+	throw_2_range = 5
 	m_amt = 20000
 	g_amt = 10000
 	origin_tech = "materials=1;biotech=1"
@@ -798,14 +798,14 @@ LOOK FOR SURGERY.DM*/
 	icon_state = "bone-gel"
 	force = 0
 	w_class = 2.0
-	throwforce = 1.0
+	throw_2force = 1.0
 
 /obj/item/weapon/FixOVein
 	name = "FixOVein"
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "fixovein"
 	force = 0
-	throwforce = 1.0
+	throw_2force = 1.0
 	origin_tech = "materials=1;biotech=3"
 	w_class = 2.0
 	var/usage_amount = 10
@@ -815,8 +815,8 @@ LOOK FOR SURGERY.DM*/
 	icon = 'icons/obj/surgery.dmi'
 	icon_state = "bone setter"
 	force = 10.0
-	throwforce = 9.0
-	throw_speed = 3
-	throw_range = 5
+	throw_2force = 9.0
+	throw_2_speed = 3
+	throw_2_range = 5
 	w_class = 2.0
 	attack_verb = list("attacked", "hit", "bludgeoned")

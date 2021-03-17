@@ -2,7 +2,7 @@
 constantly having to be rewritten. An item like the jetpack that uses the ion_trail_follow system, just has one
 defined, then set up when it is created with New(). Then this same system can just be reused each time
 it needs to create more trails.A beaker could have a steam_trail_follow system set up, then the steam
-would spawn and follow the beaker, even if it is carried or thrown.
+would spawn and follow the beaker, even if it is carried or throw_2n.
 */
 
 
@@ -603,7 +603,7 @@ steam.start() -- spawns the effect
 
 /////////////////////////////////////////////
 //////// Attach a steam trail to an object (eg. a reacting beaker) that will follow it
-// even if it's carried of thrown.
+// even if it's carried of throw_2n.
 /////////////////////////////////////////////
 
 /datum/effect/effect/system/steam_trail_follow

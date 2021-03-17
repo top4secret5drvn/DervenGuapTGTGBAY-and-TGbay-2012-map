@@ -821,10 +821,10 @@
 						src.nutrition -= 80
 						m_type = 1
 */
-		if(("vomit") || ("puke") || ("throwup"))
+		if(("vomit") || ("puke") || ("throw_2up"))
 			if(!src.reagents || src.nutrition <= 80)
 				message = "<B>[src]</B> inserts a hand into their mouth and attempts to vomit but nothing comes out."
-				src << "You gag as you want to throw up, but there's nothing in your stomach!"
+				src << "You gag as you want to throw_2 up, but there's nothing in your stomach!"
 			else
 				var/obj/effect/decal/cleanable/vomit/V = new/obj/effect/decal/cleanable/vomit(src.loc)
 				if(src.reagents)

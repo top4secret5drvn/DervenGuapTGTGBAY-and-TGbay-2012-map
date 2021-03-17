@@ -173,7 +173,7 @@
 		interpreter.SetProc("floor", /proc/n_floor)
 		interpreter.SetProc("ceil", /proc/n_ceil)
 		interpreter.SetProc("round", /proc/n_round)
-		interpreter.SetProc("clamp", /proc/n_clamp)
+		interpreter.SetProc("clamp", /proc/n_clamp2)
 		interpreter.SetProc("inrange", /proc/n_inrange)
 		// End of Donkie~
 

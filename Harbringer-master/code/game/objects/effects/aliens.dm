@@ -97,7 +97,7 @@
 	if(ismob(AM))
 		tforce = 10
 	else
-		tforce = AM:throwforce
+		tforce = AM:throw_2force
 	playsound(loc, 'sound/effects/attackblob.ogg', 100, 1)
 	health = max(0, health - tforce)
 	healthcheck()

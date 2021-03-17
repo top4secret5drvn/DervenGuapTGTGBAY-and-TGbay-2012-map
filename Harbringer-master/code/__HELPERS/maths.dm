@@ -12,7 +12,7 @@ var/const/Sqrt2	= 1.41421356
 /proc/Ceiling(x)
 	return -round(-x)
 
-/proc/Clamp(val, min, max)
+/proc/clamp2(val, min, max)
 	return max(min, min(val, max))
 
 // cotangent

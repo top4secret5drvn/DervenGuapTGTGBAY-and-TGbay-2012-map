@@ -39,7 +39,7 @@
 	"storage1" = "SOUTH-1,EAST-5",
 	"storage2" = "SOUTH-1,EAST-4",
 
-	"throw" = "SOUTH,EAST",
+	"throw_2" = "SOUTH,EAST",
 	"resist" = "SOUTH,EAST-1",
 	"acti" = "SOUTH-1,EAST-1",
 	"movi" = "SOUTH-1,EAST-2",
@@ -167,7 +167,7 @@
 	using.name = "drop"
 	using.icon = uistyle
 	using.icon_state = "act_drop"
-	using.screen_loc = special.locations["throw"]
+	using.screen_loc = special.locations["throw_2"]
 	using.layer = 19
 	src.hotkeybuttons += using
 
@@ -428,12 +428,12 @@
 	else
 		src.adding += inv_box
 
-	mymob.throw_icon = new /obj/screen()
-	mymob.throw_icon.icon = uistyle
-	mymob.throw_icon.icon_state = "act_throw_off"
-	mymob.throw_icon.name = "throw"
-	mymob.throw_icon.screen_loc = special.locations["throw"]
-	src.hotkeybuttons += mymob.throw_icon
+	mymob.throw_2_icon = new /obj/screen()
+	mymob.throw_2_icon.icon = uistyle
+	mymob.throw_2_icon.icon_state = "act_throw_2_off"
+	mymob.throw_2_icon.name = "throw_2"
+	mymob.throw_2_icon.screen_loc = special.locations["throw_2"]
+	src.hotkeybuttons += mymob.throw_2_icon
 
 	mymob.oxygen = new /obj/screen()
 	mymob.oxygen.icon = uistyle
@@ -540,7 +540,7 @@
 
 	mymob.client.screen = null
 
-	mymob.client.screen += list(mymob.throw_icon, mymob.zone_sel, mymob.oxygen, mymob.pressure, mymob.toxin, mymob.bodytemp, mymob.internals, mymob.fire, mymob.healths, mymob.nutrition_icon, mymob.pullin, mymob.blind, mymob.flash, mymob.damageoverlay)
+	mymob.client.screen += list(mymob.throw_2_icon, mymob.zone_sel, mymob.oxygen, mymob.pressure, mymob.toxin, mymob.bodytemp, mymob.internals, mymob.fire, mymob.healths, mymob.nutrition_icon, mymob.pullin, mymob.blind, mymob.flash, mymob.damageoverlay)
 	mymob.client.screen += src.adding + src.hotkeybuttons
 	inventory_shown = 0
 

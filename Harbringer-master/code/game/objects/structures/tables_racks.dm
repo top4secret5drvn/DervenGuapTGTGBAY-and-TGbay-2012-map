@@ -18,7 +18,7 @@
 	density = 1
 	anchored = 1.0
 	layer = 2.8
-	throwpass = 1	//You can throw objects over this, despite it's density.")
+	throw_2pass = 1	//You can throw_2 objects over this, despite it's density.")
 	var/parts = /obj/item/weapon/table_parts
 	var/flipped = 0
 	var/dented = 0
@@ -525,7 +525,7 @@
 	for (var/atom/movable/A in get_turf(src))
 		if (!A.anchored)
 			spawn(0)
-				A.throw_at(pick(targets),1,1)
+				A.throw_2_at(pick(targets),1,1)
 
 	dir = direction
 	if(dir != NORTH)
@@ -641,7 +641,7 @@
 	density = 1
 	flags = FPRINT
 	anchored = 1.0
-	throwpass = 1	//You can throw objects over this, despite it's density.
+	throw_2pass = 1	//You can throw_2 objects over this, despite it's density.
 	var/parts = /obj/item/weapon/rack_parts
 
 /obj/structure/rack/ex_act(severity)

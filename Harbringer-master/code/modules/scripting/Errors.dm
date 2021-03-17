@@ -62,7 +62,7 @@
 
 /*
 	Class: runtimeError
-	An error thrown by the interpreter in running the script.
+	An error throw_2n by the interpreter in running the script.
 */
 /runtimeError
 	var

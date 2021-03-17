@@ -5,10 +5,10 @@
 	icon_state = "stamp-qm"
 	item_state = "stamp"
 	flags = FPRINT | TABLEPASS
-	throwforce = 0
+	throw_2force = 0
 	w_class = 1.0
-	throw_speed = 7
-	throw_range = 15
+	throw_2_speed = 7
+	throw_2_range = 15
 	m_amt = 60
 	item_color = "cargo"
 	pressure_resistance = 2

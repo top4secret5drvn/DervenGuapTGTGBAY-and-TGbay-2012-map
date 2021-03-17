@@ -6,7 +6,7 @@
 	item_state = "render"
 	flags = FPRINT | TABLEPASS
 	force = 15
-	throwforce = 10
+	throw_2force = 10
 	w_class = 3
 	var/charged = 1
 

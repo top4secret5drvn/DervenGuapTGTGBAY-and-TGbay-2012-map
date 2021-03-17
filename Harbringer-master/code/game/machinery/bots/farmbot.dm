@@ -248,7 +248,7 @@
 
 	if ( mode && target )
 		if ( get_dist(target,src) <= 1 || ( emagged && mode == FARMBOT_MODE_FERTILIZE ) )
-			// If we are in emagged fertilize mode, we throw the fertilizer, so distance doesn't matter
+			// If we are in emagged fertilize mode, we throw_2 the fertilizer, so distance doesn't matter
 			frustration = 0
 			use_farmbot_item()
 		else
@@ -391,10 +391,10 @@
 		mode = 0
 		return 0
 
-	if ( emagged ) // Warning, hungry humans detected: throw fertilizer at them
+	if ( emagged ) // Warning, hungry humans detected: throw_2 fertilizer at them
 		spawn(0)
 			fert.loc = src.loc
-			fert.throw_at(target, 16, 3)
+			fert.throw_2_at(target, 16, 3)
 		src.visible_message("\red <b>[src] launches [fert.name] at [target.name]!</b>")
 		flick("farmbot_broke", src)
 		spawn (FARMBOT_EMAG_DELAY)

@@ -33,25 +33,25 @@ obj/effect/decal/cleanable/liquid_fuel
 						new/obj/effect/decal/cleanable/liquid_fuel(target, amount*0.25)
 						amount *= 0.75
 
-	flamethrower_fuel
+	flamethrow_2er_fuel
 		icon_state = "mustard"
 		anchored = 0
 		New(newLoc, amt = 1, d = 0)
-			dir = d //Setting this direction means you won't get torched by your own flamethrower.
+			dir = d //Setting this direction means you won't get torched by your own flamethrow_2er.
 			. = ..()
 
 		Spread()
-			//The spread for flamethrower fuel is much more precise, to create a wide fire pattern.
+			//The spread for flamethrow_2er fuel is much more precise, to create a wide fire pattern.
 			if(amount < 0.1) return
 			var/turf/simulated/S = loc
 			if(!istype(S)) return
 
 			for(var/d in list(turn(dir,90),turn(dir,-90), dir))
 				var/turf/simulated/O = get_step(S,d)
-				if(locate(/obj/effect/decal/cleanable/liquid_fuel/flamethrower_fuel) in O)
+				if(locate(/obj/effect/decal/cleanable/liquid_fuel/flamethrow_2er_fuel) in O)
 					continue
 				if(O.CanPass(null, S, 0, 0) && S.CanPass(null, O, 0, 0))
-					new/obj/effect/decal/cleanable/liquid_fuel/flamethrower_fuel(O,amount*0.25,d)
-					O.hotspot_expose((T20C*2) + 380,500) //Light flamethrower fuel on fire immediately.
+					new/obj/effect/decal/cleanable/liquid_fuel/flamethrow_2er_fuel(O,amount*0.25,d)
+					O.hotspot_expose((T20C*2) + 380,500) //Light flamethrow_2er fuel on fire immediately.
 
 			amount *= 0.25

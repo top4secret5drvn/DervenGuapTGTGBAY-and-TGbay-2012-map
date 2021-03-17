@@ -89,7 +89,7 @@
 		tforce = 40
 	else if(isobj(AM))
 		var/obj/item/I = AM
-		tforce = I.throwforce
+		tforce = I.throw_2force
 	if(reinf) tforce *= 0.25
 	playsound(loc, 'sound/effects/Glasshit.ogg', 100, 1)
 	health = max(0, health - tforce)

@@ -321,9 +321,9 @@ A list of items and costs is stored under the datum of every game mode, alongsid
 	slot_flags = SLOT_BELT
 	w_class = 2.0
 	item_state = "radio"
-	throwforce = 5
-	throw_speed = 4
-	throw_range = 20
+	throw_2force = 5
+	throw_2_speed = 4
+	throw_2_range = 20
 	m_amt = 100
 
 	attack_self(mob/user as mob)

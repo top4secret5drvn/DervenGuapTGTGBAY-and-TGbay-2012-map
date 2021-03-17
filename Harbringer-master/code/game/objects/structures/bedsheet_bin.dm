@@ -11,9 +11,9 @@ LINEN BINS
 	icon_state = "sheet"
 	item_state = "bedsheet"
 	layer = 4.0
-	throwforce = 1
-	throw_speed = 1
-	throw_range = 2
+	throw_2force = 1
+	throw_2_speed = 1
+	throw_2_range = 2
 	w_class = 1.0
 	item_color = "white"
 

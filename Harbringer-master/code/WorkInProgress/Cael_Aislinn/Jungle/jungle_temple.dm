@@ -288,7 +288,7 @@
 	var/trap_type
 
 	New()
-		trap_type = pick(50;"thrower","sawburst","poison_dart","flame_burst",10;"plasma_gas",5;"n2_gas")
+		trap_type = pick(50;"throw_2er","sawburst","poison_dart","flame_burst",10;"plasma_gas",5;"n2_gas")
 		if( (trap_type == "plasma_gas" || trap_type == "n2_gas") && prob(10))
 			new /obj/effect/glowshroom(src.loc)
 
@@ -340,13 +340,13 @@
 			//spawn a bunch of plasma
 		if("n2_gas")
 			//spawn a bunch of sleeping gas
-		if("thrower")
-			//edited version of obj/effect/step_trigger/thrower
-			var/throw_dir = pick(1,2,4,8)
+		if("throw_2er")
+			//edited version of obj/effect/step_trigger/throw_2er
+			var/throw_2_dir = pick(1,2,4,8)
 			M.visible_message("\red <b>The floor under [M] suddenly tips upward!</b>","\red <b>The floor tips upward under you!</b>")
 
 			var/atom/myloc = src.loc
-			var/image/flicker = image('code/WorkInProgress/Cael_Aislinn/Jungle/jungle.dmi',"throw[throw_dir]")
+			var/image/flicker = image('code/WorkInProgress/Cael_Aislinn/Jungle/jungle.dmi',"throw_2[throw_2_dir]")
 			myloc.overlays += flicker
 			var/turf/my_turf = get_turf(loc)
 			if(!my_turf.density)
@@ -369,7 +369,7 @@
 				sleep(1)
 
 				var/predir = M.dir
-				step(M, throw_dir)
+				step(M, throw_2_dir)
 				M.dir = predir
 
 //gives turf a different description, to try and trick players

@@ -115,7 +115,7 @@
 	if(!density) return 1
 	if(air_group || (height==0)) return 1
 
-	if ((mover.flags & 2 || istype(mover, /obj/effect/meteor) || mover.throwing == 1) )
+	if ((mover.flags & 2 || istype(mover, /obj/effect/meteor) || mover.throw_2ing == 1) )
 		return 1
 	else
 		return 0

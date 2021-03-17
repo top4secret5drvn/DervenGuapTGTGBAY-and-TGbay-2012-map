@@ -59,24 +59,24 @@ proc/move_mining_shuttle()
 			toArea = locate(/area/shuttle/mining/outpost)
 
 		var/list/dstturfs = list()
-		var/throwy = world.maxy
+		var/throw_2y = world.maxy
 
 		for(var/turf/T in toArea)
 			dstturfs += T
-			if(T.y < throwy)
-				throwy = T.y
+			if(T.y < throw_2y)
+				throw_2y = T.y
 
 		// hey you, get out of the way!
 		for(var/turf/T in dstturfs)
 			// find the turf to move things to
-			var/turf/D = locate(T.x, throwy - 1, 1)
+			var/turf/D = locate(T.x, throw_2y - 1, 1)
 			//var/turf/E = get_step(D, SOUTH)
 			for(var/atom/movable/AM as mob|obj in T)
 				AM.Move(D)
 				// NOTE: Commenting this out to avoid recreating mass driver glitch
 				/*
 				spawn(0)
-					AM.throw_at(E, 1, 1)
+					AM.throw_2_at(E, 1, 1)
 					return
 				*/
 
@@ -201,7 +201,7 @@ proc/move_mining_shuttle()
 	flags = FPRINT | TABLEPASS| CONDUCT
 	slot_flags = SLOT_BELT
 	force = 15.0
-	throwforce = 4.0
+	throw_2force = 4.0
 	item_state = "pickaxe"
 	w_class = 4.0
 	m_amt = 3750 //one sheet, but where can you make them?
@@ -293,7 +293,7 @@ proc/move_mining_shuttle()
 	flags = FPRINT | TABLEPASS| CONDUCT
 	slot_flags = SLOT_BELT
 	force = 8.0
-	throwforce = 4.0
+	throw_2force = 4.0
 	item_state = "shovel"
 	w_class = 3.0
 	m_amt = 50
@@ -306,7 +306,7 @@ proc/move_mining_shuttle()
 	icon_state = "spade"
 	item_state = "spade"
 	force = 5.0
-	throwforce = 7.0
+	throw_2force = 7.0
 	w_class = 2.0
 
 

@@ -214,11 +214,11 @@
 	using.mouse_opacity = 0
 	src.vimpaired += using
 
-	mymob.throw_icon = new /obj/screen(null)
-	mymob.throw_icon.icon = ui_style
-	mymob.throw_icon.icon_state = "act_throw_off"
-	mymob.throw_icon.name = "throw"
-	mymob.throw_icon.screen_loc = ui_throw
+	mymob.throw_2_icon = new /obj/screen(null)
+	mymob.throw_2_icon.icon = ui_style
+	mymob.throw_2_icon.icon_state = "act_throw_2_off"
+	mymob.throw_2_icon.name = "throw_2"
+	mymob.throw_2_icon.screen_loc = ui_throw_2
 
 	mymob.oxygen = new /obj/screen( null )
 	mymob.oxygen.icon = ui_style
@@ -310,7 +310,7 @@
 	mymob.client.screen = null
 
 	//, mymob.i_select, mymob.m_select
-	mymob.client.screen += list( mymob.throw_icon, mymob.zone_sel, mymob.oxygen, mymob.pressure, mymob.toxin, mymob.bodytemp, mymob.internals, mymob.fire, mymob.healths, mymob.pullin, mymob.blind, mymob.flash, mymob.gun_setting_icon) //, mymob.hands, mymob.rest, mymob.sleep, mymob.mach, mymob.hands, )
+	mymob.client.screen += list( mymob.throw_2_icon, mymob.zone_sel, mymob.oxygen, mymob.pressure, mymob.toxin, mymob.bodytemp, mymob.internals, mymob.fire, mymob.healths, mymob.pullin, mymob.blind, mymob.flash, mymob.gun_setting_icon) //, mymob.hands, mymob.rest, mymob.sleep, mymob.mach, mymob.hands, )
 	mymob.client.screen += src.adding + src.other
 
 	//if(istype(mymob,/mob/living/carbon/monkey)) mymob.client.screen += src.mon_blo

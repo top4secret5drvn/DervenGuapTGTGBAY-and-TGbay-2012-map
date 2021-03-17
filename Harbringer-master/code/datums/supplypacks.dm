@@ -604,7 +604,7 @@ var/list/all_supply_groups = list("Operations","Security","Hospitality","Enginee
 
 /datum/supply_packs/eweapons
 	name = "Experimental weapons crate"
-	contains = list(/obj/item/weapon/flamethrower/full,
+	contains = list(/obj/item/weapon/flamethrow_2er/full,
 					/obj/item/weapon/tank/plasma,
 					/obj/item/weapon/tank/plasma,
 					/obj/item/weapon/tank/plasma,

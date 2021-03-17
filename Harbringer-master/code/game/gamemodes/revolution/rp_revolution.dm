@@ -141,7 +141,7 @@
 //////////////////////////////////////////////////////////////////////
 /datum/game_mode/revolution/rp_revolution/declare_completion()
 	if(finished == 1)
-		world << "\red <FONT size = 3><B> The heads of staff were overthrown! The revolutionaries win!</B></FONT>"
+		world << "\red <FONT size = 3><B> The heads of staff were overthrow_2n! The revolutionaries win!</B></FONT>"
 	else if(finished == 2)
 		world << "\red <FONT size = 3><B> The heads of staff managed to stop the revolution!</B></FONT>"
 	..()

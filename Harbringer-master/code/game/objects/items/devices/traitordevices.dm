@@ -18,10 +18,10 @@ effective or pretty fucking useless.
 	name = "mind batterer"
 	desc = "A strange device with twin antennas."
 	icon_state = "batterer"
-	throwforce = 5
+	throw_2force = 5
 	w_class = 1.0
-	throw_speed = 4
-	throw_range = 10
+	throw_2_speed = 4
+	throw_2_range = 10
 	flags = FPRINT | TABLEPASS| CONDUCT
 	item_state = "electronic"
 	origin_tech = "magnets=3;combat=3;syndicate=3"

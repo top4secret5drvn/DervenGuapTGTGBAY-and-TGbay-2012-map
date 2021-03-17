@@ -207,7 +207,7 @@
 	del(src)
 	return
 
-/obj/item/weapon/melee/energy/blade/proc/throw()
+/obj/item/weapon/melee/energy/blade/proc/throw_2()
 	del(src)
 	return
 

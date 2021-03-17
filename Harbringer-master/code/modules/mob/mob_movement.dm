@@ -77,9 +77,9 @@
 /client/Southwest()
 	if(iscarbon(usr))
 		var/mob/living/carbon/C = usr
-		C.toggle_throw_mode()
+		C.toggle_throw_2_mode()
 	else
-		usr << "\red This mob type cannot throw items."
+		usr << "\red This mob type cannot throw_2 items."
 	return
 
 
@@ -121,12 +121,12 @@
 	return
 
 
-/client/verb/toggle_throw_mode()
+/client/verb/toggle_throw_2_mode()
 	set hidden = 1
 	if(!istype(mob, /mob/living/carbon))
 		return
 	if (!mob.stat && isturf(mob.loc) && !mob.restrained())
-		mob:toggle_throw_mode()
+		mob:toggle_throw_2_mode()
 	else
 		return
 

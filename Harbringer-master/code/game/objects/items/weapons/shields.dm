@@ -9,9 +9,9 @@
 	flags = FPRINT | TABLEPASS| CONDUCT
 	slot_flags = SLOT_BACK
 	force = 5.0
-	throwforce = 5.0
-	throw_speed = 1
-	throw_range = 4
+	throw_2force = 5.0
+	throw_2_speed = 1
+	throw_2_range = 4
 	w_class = 4.0
 	g_amt = 7500
 	m_amt = 1000
@@ -38,9 +38,9 @@
 	icon_state = "eshield0" // eshield1 for expanded
 	flags = FPRINT | TABLEPASS| CONDUCT
 	force = 3.0
-	throwforce = 5.0
-	throw_speed = 1
-	throw_range = 4
+	throw_2force = 5.0
+	throw_2_speed = 1
+	throw_2_range = 4
 	w_class = 1
 	origin_tech = "materials=4;magnets=3;syndicate=4"
 	attack_verb = list("shoved", "bashed")
@@ -54,9 +54,9 @@
 	var/active = 0.0
 	flags = FPRINT | TABLEPASS| CONDUCT
 	item_state = "electronic"
-	throwforce = 10.0
-	throw_speed = 2
-	throw_range = 10
+	throw_2force = 10.0
+	throw_2_speed = 2
+	throw_2_range = 10
 	w_class = 2.0
 	origin_tech = "magnets=3;syndicate=4"
 

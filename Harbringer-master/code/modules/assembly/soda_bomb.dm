@@ -18,8 +18,8 @@
 	else ..()
 
 /obj/item/weapon/reagent_containers/food/drinks/cans
-	throw_speed = 4
-	throw_range = 20
+	throw_2_speed = 4
+	throw_2_range = 20
 	var/assemblystate = 0
 	var/det_time = 50
 	var/active = 0

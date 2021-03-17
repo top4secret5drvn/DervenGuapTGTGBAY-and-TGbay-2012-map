@@ -151,7 +151,7 @@
 		take_damage(round(Proj.damage / 2))
 	..()
 
-//When an object is thrown at the window
+//When an object is throw_2n at the window
 /obj/machinery/door/window/hitby(AM as mob|obj)
 
 	..()
@@ -160,7 +160,7 @@
 	if(ismob(AM))
 		tforce = 40
 	else
-		tforce = AM:throwforce
+		tforce = AM:throw_2force
 	playsound(src.loc, 'sound/effects/Glasshit.ogg', 100, 1)
 	take_damage(tforce)
 	//..() //Does this really need to be here twice? The parent proc doesn't even do anything yet. - Nodrak

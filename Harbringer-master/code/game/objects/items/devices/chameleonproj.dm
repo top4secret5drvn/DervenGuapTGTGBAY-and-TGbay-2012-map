@@ -4,9 +4,9 @@
 	flags = FPRINT | TABLEPASS| CONDUCT
 	slot_flags = SLOT_BELT
 	item_state = "electronic"
-	throwforce = 5.0
-	throw_speed = 1
-	throw_range = 5
+	throw_2force = 5.0
+	throw_2_speed = 1
+	throw_2_range = 5
 	w_class = 2.0
 	origin_tech = "syndicate=4;magnets=4"
 	var/can_use = 1

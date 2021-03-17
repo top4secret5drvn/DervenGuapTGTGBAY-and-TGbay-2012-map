@@ -39,7 +39,7 @@
 				var/mob/living/carbon/human/H = affected_mob
 				H.vomit()
 			else
-				affected_mob << "\red You gag as you want to throw up, but there's nothing in your stomach!"
+				affected_mob << "\red You gag as you want to throw_2 up, but there's nothing in your stomach!"
 				affected_mob.Weaken(10)
 				affected_mob.adjustToxLoss(3)
 	if(stage > 3)

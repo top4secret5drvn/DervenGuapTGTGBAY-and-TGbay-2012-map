@@ -120,8 +120,8 @@
 	name = "book"
 	icon = 'icons/obj/library.dmi'
 	icon_state ="book"
-	throw_speed = 1
-	throw_range = 5
+	throw_2_speed = 1
+	throw_2_range = 5
 	w_class = 3		 //upped to three because books are, y'know, pretty big. (and you could hide them inside eachother recursively forever)
 	flags = FPRINT | TABLEPASS
 	attack_verb = list("bashed", "whacked", "educated")
@@ -242,8 +242,8 @@
 	name = "barcode scanner"
 	icon = 'icons/obj/library.dmi'
 	icon_state ="scanner"
-	throw_speed = 1
-	throw_range = 5
+	throw_2_speed = 1
+	throw_2_range = 5
 	w_class = 1.0
 	flags = FPRINT | TABLEPASS
 	var/obj/machinery/librarycomp/computer // Associated computer - Modes 1 to 3 use this

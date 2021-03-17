@@ -48,7 +48,7 @@
 //Lower right, persistant menu
 #define ui_swaphand "SOUTH-1,6"
 #define ui_dropbutton "SOUTH-1,7"
-#define ui_drop_throw "SOUTH-1,8"
+#define ui_drop_throw_2 "SOUTH-1,8"
 #define ui_pull "SOUTH-1,10"
 #define ui_resist "EAST,SOUTH-1"
 #define ui_acti "SOUTH-1,12"
@@ -160,7 +160,7 @@
 
 //Lower right, persistant menu
 #define ui_tg_dropbutton "11:22,1:5"
-#define ui_tg_drop_throw "14:28,2:7"
+#define ui_tg_drop_throw_2 "14:28,2:7"
 #define ui_tg_pull_resist "13:26,2:7"
 #define ui_tg_acti "13:26,1:5"
 #define ui_tg_movi "12:24,1:5"

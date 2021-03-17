@@ -1173,10 +1173,10 @@
 	icon_state = "logs"
 	force = 5
 	flags = TABLEPASS
-	throwforce = 5
+	throw_2force = 5
 	w_class = 3.0
-	throw_speed = 3
-	throw_range = 3
+	throw_2_speed = 3
+	throw_2_range = 3
 	plant_type = 2
 	origin_tech = "materials=1"
 	seed = "/obj/item/seeds/towermycelium"
@@ -1206,10 +1206,10 @@
 	damtype = "fire"
 	force = 0
 	flags = TABLEPASS
-	throwforce = 1
+	throw_2force = 1
 	w_class = 1.0
-	throw_speed = 1
-	throw_range = 3
+	throw_2_speed = 1
+	throw_2_range = 3
 	plant_type = 1
 	seed = "/obj/item/seeds/sunflower"
 /*
@@ -1221,10 +1221,10 @@
 	damtype = "fire"
 	force = 0
 	flags = TABLEPASS
-	throwforce = 1
+	throw_2force = 1
 	w_class = 1.0
-	throw_speed = 1
-	throw_range = 3
+	throw_2_speed = 1
+	throw_2_range = 3
 	plant_type = 1
 	seed = "/obj/item/seeds/gibtomato"
 	New()
@@ -1245,10 +1245,10 @@
 	damtype = "fire"
 	force = 15
 	flags = TABLEPASS
-	throwforce = 1
+	throw_2force = 1
 	w_class = 1.0
-	throw_speed = 1
-	throw_range = 3
+	throw_2_speed = 1
+	throw_2_range = 3
 	plant_type = 1
 	origin_tech = "combat=1"
 	seed = "/obj/item/seeds/nettleseed"
@@ -1267,10 +1267,10 @@
 	damtype = "fire"
 	force = 30
 	flags = TABLEPASS
-	throwforce = 1
+	throw_2force = 1
 	w_class = 1.0
-	throw_speed = 1
-	throw_range = 3
+	throw_2_speed = 1
+	throw_2_range = 3
 	plant_type = 1
 	seed = "/obj/item/seeds/deathnettleseed"
 	origin_tech = "combat=3"
@@ -1346,10 +1346,10 @@
 	item_state = "spray"
 	flags = TABLEPASS | OPENCONTAINER | FPRINT | NOBLUDGEON
 	slot_flags = SLOT_BELT
-	throwforce = 4
+	throw_2force = 4
 	w_class = 2.0
-	throw_speed = 2
-	throw_range = 10
+	throw_2_speed = 2
+	throw_2_range = 10
 	var/toxicity = 4
 	var/WeedKillStr = 2
 
@@ -1365,10 +1365,10 @@
 	item_state = "spray"
 	flags = TABLEPASS | OPENCONTAINER | FPRINT | NOBLUDGEON
 	slot_flags = SLOT_BELT
-	throwforce = 4
+	throw_2force = 4
 	w_class = 2.0
-	throw_speed = 2
-	throw_range = 10
+	throw_2_speed = 2
+	throw_2_range = 10
 	var/toxicity = 4
 	var/PestKillStr = 2
 
@@ -1384,7 +1384,7 @@
 	item_state = "hoe"
 	flags = FPRINT | TABLEPASS | CONDUCT | NOBLUDGEON
 	force = 5.0
-	throwforce = 7.0
+	throw_2force = 7.0
 	w_class = 2.0
 	m_amt = 50
 	attack_verb = list("slashed", "sliced", "cut", "clawed")

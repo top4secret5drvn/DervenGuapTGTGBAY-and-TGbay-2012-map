@@ -22,8 +22,8 @@ Mineral Sheets
 	desc = "This appears to be a combination of both sand and stone."
 	singular_name = "sandstone brick"
 	icon_state = "sheet-sandstone"
-	throw_speed = 4
-	throw_range = 5
+	throw_2_speed = 4
+	throw_2_range = 5
 	origin_tech = "materials=1"
 	sheettype = "sandstone"
 
@@ -47,9 +47,9 @@ var/global/list/datum/stack_recipe/sandstone_recipes = list ( \
 	name = "diamond"
 	icon_state = "sheet-diamond"
 	force = 5.0
-	throwforce = 5
+	throw_2force = 5
 	w_class = 3.0
-	throw_range = 3
+	throw_2_range = 3
 	origin_tech = "materials=6"
 	perunit = 3750
 	sheettype = "diamond"
@@ -71,10 +71,10 @@ var/global/list/datum/stack_recipe/diamond_recipes = list ( \
 	name = "uranium"
 	icon_state = "sheet-uranium"
 	force = 5.0
-	throwforce = 5
+	throw_2force = 5
 	w_class = 3.0
-	throw_speed = 3
-	throw_range = 3
+	throw_2_speed = 3
+	throw_2_range = 3
 	origin_tech = "materials=5"
 	perunit = 2000
 	sheettype = "uranium"
@@ -96,10 +96,10 @@ var/global/list/datum/stack_recipe/uranium_recipes = list ( \
 	name = "solid plasma"
 	icon_state = "sheet-plasma"
 	force = 5.0
-	throwforce = 5
+	throw_2force = 5
 	w_class = 3.0
-	throw_speed = 3
-	throw_range = 3
+	throw_2_speed = 3
+	throw_2_range = 3
 	origin_tech = "plasmatech=2;materials=2"
 	perunit = 2000
 	sheettype = "plasma"
@@ -118,10 +118,10 @@ var/global/list/datum/stack_recipe/plasma_recipes = list ( \
 	name = "Plastic"
 	icon_state = "sheet-plastic"
 	force = 5.0
-	throwforce = 5
+	throw_2force = 5
 	w_class = 3.0
-	throw_speed = 3
-	throw_range = 3
+	throw_2_speed = 3
+	throw_2_range = 3
 	origin_tech = "materials=3"
 	perunit = 2000
 
@@ -147,10 +147,10 @@ var/global/list/datum/stack_recipe/plastic_recipes = list ( \
 	name = "gold"
 	icon_state = "sheet-gold"
 	force = 5.0
-	throwforce = 5
+	throw_2force = 5
 	w_class = 3.0
-	throw_speed = 3
-	throw_range = 3
+	throw_2_speed = 3
+	throw_2_range = 3
 	origin_tech = "materials=4"
 	perunit = 2000
 	sheettype = "gold"
@@ -172,10 +172,10 @@ var/global/list/datum/stack_recipe/gold_recipes = list ( \
 	name = "silver"
 	icon_state = "sheet-silver"
 	force = 5.0
-	throwforce = 5
+	throw_2force = 5
 	w_class = 3.0
-	throw_speed = 3
-	throw_range = 3
+	throw_2_speed = 3
+	throw_2_range = 3
 	origin_tech = "materials=3"
 	perunit = 2000
 	sheettype = "silver"
@@ -197,10 +197,10 @@ var/global/list/datum/stack_recipe/silver_recipes = list ( \
 	name = "bananium"
 	icon_state = "sheet-clown"
 	force = 5.0
-	throwforce = 5
+	throw_2force = 5
 	w_class = 3.0
-	throw_speed = 3
-	throw_range = 3
+	throw_2_speed = 3
+	throw_2_range = 3
 	origin_tech = "materials=4"
 	perunit = 2000
 	sheettype = "clown"
@@ -220,10 +220,10 @@ var/global/list/datum/stack_recipe/silver_recipes = list ( \
 	name = "enriched uranium"
 	icon_state = "sheet-enruranium"
 	force = 5.0
-	throwforce = 5
+	throw_2force = 5
 	w_class = 3.0
-	throw_speed = 3
-	throw_range = 3
+	throw_2_speed = 3
+	throw_2_range = 3
 	origin_tech = "materials=5"
 	perunit = 1000
 
@@ -234,10 +234,10 @@ var/global/list/datum/stack_recipe/silver_recipes = list ( \
 	name = "adamantine"
 	icon_state = "sheet-adamantine"
 	force = 5.0
-	throwforce = 5
+	throw_2force = 5
 	w_class = 3.0
-	throw_speed = 3
-	throw_range = 3
+	throw_2_speed = 3
+	throw_2_range = 3
 	origin_tech = "materials=4"
 	perunit = 2000
 
@@ -248,9 +248,9 @@ var/global/list/datum/stack_recipe/silver_recipes = list ( \
 	name = "mythril"
 	icon_state = "sheet-mythril"
 	force = 5.0
-	throwforce = 5
+	throw_2force = 5
 	w_class = 3.0
-	throw_speed = 3
-	throw_range = 3
+	throw_2_speed = 3
+	throw_2_range = 3
 	origin_tech = "materials=4"
 	perunit = 2000

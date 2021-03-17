@@ -9,7 +9,7 @@
 	var/blood_color
 	var/last_bumped = 0
 	var/pass_flags = 0
-	var/throwpass = 0
+	var/throw_2pass = 0
 	var/germ_level = 0 // The higher the germ level, the more germ on the atom.
 
 	///Chemistry.
@@ -22,11 +22,11 @@
 	//Detective Work, used for the duplicate data points kept in the scanners
 	var/list/original_atom
 
-/atom/proc/throw_impact(atom/hit_atom, var/speed)
+/atom/proc/throw_2_impact(atom/hit_atom, var/speed)
 	if(istype(hit_atom,/mob/living))
 		var/mob/living/M = hit_atom
 
-		if(!istype(src, /obj/item)) // this is a big item that's being thrown at them~
+		if(!istype(src, /obj/item)) // this is a big item that's being throw_2n at them~
 
 			if(istype(M, /mob/living/carbon/human))
 				var/armor_block = M:run_armor_check("chest", "melee")
@@ -38,12 +38,12 @@
 				M:UpdateDamageIcon()
 			else
 				M.take_organ_damage(rand(20,45))
-		else if(src.vars.Find("throwforce"))
-			M.take_organ_damage(src:throwforce)
+		else if(src.vars.Find("throw_2force"))
+			M.take_organ_damage(src:throw_2force)
 
-			log_attack("<font color='red'>[hit_atom] ([M.ckey]) was hit by [src] thrown by ([src.fingerprintslast])</font>")
-			//log_admin("ATTACK: [hit_atom] ([M.ckey]) was hit by [src] thrown by ([src.fingerprintslast])")
-			msg_admin_attack("[hit_atom] ([M.ckey])(<A HREF='?src=%admin_ref%;adminplayerobservejump=\ref[M]'>JMP</A>) was hit by [src] thrown by ([src.fingerprintslast])", 2)
+			log_attack("<font color='red'>[hit_atom] ([M.ckey]) was hit by [src] throw_2n by ([src.fingerprintslast])</font>")
+			//log_admin("ATTACK: [hit_atom] ([M.ckey]) was hit by [src] throw_2n by ([src.fingerprintslast])")
+			msg_admin_attack("[hit_atom] ([M.ckey])(<A HREF='?src=%admin_ref%;adminplayerobservejump=\ref[M]'>JMP</A>) was hit by [src] throw_2n by ([src.fingerprintslast])", 2)
 
 
 

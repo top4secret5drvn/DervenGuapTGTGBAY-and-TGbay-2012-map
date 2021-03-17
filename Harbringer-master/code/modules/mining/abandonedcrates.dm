@@ -70,7 +70,7 @@
 		user << "<span class='notice'>The crate is locked with a Deca-code lock.</span>"
 		var/input = input(usr, "Enter digit from [min] to [max].", "Deca-Code Lock", "") as num
 		if(in_range(src, user))
-			input = Clamp(input, 0, 10)
+			input = clamp2(input, 0, 10)
 			if (input == code)
 				user << "<span class='notice'>The crate unlocks!</span>"
 				locked = 0

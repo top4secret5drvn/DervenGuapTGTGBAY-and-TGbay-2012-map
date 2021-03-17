@@ -7,7 +7,7 @@
 	icon_state = "bluespace_crystal"
 	w_class = 1
 	origin_tech = "bluespace=4;materials=3"
-	var/blink_range = 8 // The teleport range when crushed/thrown at someone.
+	var/blink_range = 8 // The teleport range when crushed/throw_2n at someone.
 
 /obj/item/bluespace_crystal/New()
 	..()
@@ -23,7 +23,7 @@
 /obj/item/bluespace_crystal/proc/blink_mob(var/mob/living/L)
 	do_teleport(L, get_turf(L), blink_range, asoundin = 'sound/effects/phasein.ogg')
 
-/obj/item/bluespace_crystal/throw_impact(atom/hit_atom)
+/obj/item/bluespace_crystal/throw_2_impact(atom/hit_atom)
 	..()
 	if(isliving(hit_atom))
 		blink_mob(hit_atom)

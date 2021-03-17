@@ -3,10 +3,10 @@
 	icon = 'icons/obj/assemblies.dmi'
 	item_state = "assembly"
 	var/status = 0.0
-	throwforce = 10
+	throw_2force = 10
 	w_class = 3.0
-	throw_speed = 4
-	throw_range = 10
+	throw_2_speed = 4
+	throw_2_range = 10
 
 /obj/item/assembly/a_i_a
 	name = "Health-Analyzer/Igniter/Armor Assembly"

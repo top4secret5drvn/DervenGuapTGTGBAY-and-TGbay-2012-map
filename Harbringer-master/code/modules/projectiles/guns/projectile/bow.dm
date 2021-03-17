@@ -6,7 +6,7 @@
 	icon_state = "bolt"
 	item_state = "bolt"
 	flags =  FPRINT | TABLEPASS
-	throwforce = 8
+	throw_2force = 8
 	w_class = 3.0
 	sharp = 1
 
@@ -20,7 +20,7 @@
 	icon = 'icons/obj/weapons.dmi'
 	icon_state = "quill"
 	item_state = "quill"
-	throwforce = 5
+	throw_2force = 5
 
 /obj/item/weapon/arrow/rod
 
@@ -29,7 +29,7 @@
 	icon_state = "metal-rod"
 
 /obj/item/weapon/arrow/rod/removed(mob/user)
-	if(throwforce == 15) // The rod has been superheated - we don't want it to be useable when removed from the bow.
+	if(throw_2force == 15) // The rod has been superheated - we don't want it to be useable when removed from the bow.
 		user  << "[src] shatters into a scattering of overstressed metal shards as it leaves the crossbow."
 		var/obj/item/weapon/shard/shrapnel/S = new()
 		S.loc = get_turf(src)
@@ -75,7 +75,7 @@
 			if(cell)
 				if(cell.charge >= 500)
 					user << "<span class='notice'>[arrow] plinks and crackles as it begins to glow red-hot.</span>"
-					arrow.throwforce = 15
+					arrow.throw_2force = 15
 					arrow.icon_state = "metal-rod-superheated"
 					cell.charge -= 500
 			return
@@ -87,9 +87,9 @@
 			cell = W
 			user << "<span class='notice'>You jam [cell] into [src] and wire it to the firing coil.</span>"
 			if(arrow)
-				if(istype(arrow,/obj/item/weapon/arrow/rod) && arrow.throwforce < 15 && cell.charge >= 500)
+				if(istype(arrow,/obj/item/weapon/arrow/rod) && arrow.throw_2force < 15 && cell.charge >= 500)
 					user << "<span class='notice'>[arrow] plinks and crackles as it begins to glow red-hot.</span>"
-					arrow.throwforce = 15
+					arrow.throw_2force = 15
 					arrow.icon_state = "metal-rod-superheated"
 					cell.charge -= 500
 		else
@@ -190,7 +190,7 @@
 
 	var/obj/item/weapon/arrow/A = arrow
 	A.loc = get_turf(user)
-	A.throw_at(target,10,tension*release_speed)
+	A.throw_2_at(target,10,tension*release_speed)
 	arrow = null
 	tension = 0
 	icon_state = "crossbow"

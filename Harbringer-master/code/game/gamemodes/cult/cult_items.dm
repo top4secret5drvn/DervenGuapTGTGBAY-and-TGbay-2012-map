@@ -6,7 +6,7 @@
 	flags = FPRINT | TABLEPASS
 	w_class = 4
 	force = 30
-	throwforce = 10
+	throw_2force = 10
 	attack_verb = list("attacked", "slashed", "sliced", "torn", "ripped", "diced", "cut")
 
 

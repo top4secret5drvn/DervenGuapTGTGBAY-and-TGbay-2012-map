@@ -331,27 +331,27 @@
 	update_icons()	//apply the now updated overlays to the mob
 
 
-//Throwing stuff
+//throw_2ing stuff
 
-/mob/living/carbon/proc/toggle_throw_mode()
-	if (src.in_throw_mode)
-		throw_mode_off()
+/mob/living/carbon/proc/toggle_throw_2_mode()
+	if (src.in_throw_2_mode)
+		throw_2_mode_off()
 	else
-		throw_mode_on()
+		throw_2_mode_on()
 
-/mob/living/carbon/proc/throw_mode_off()
-	src.in_throw_mode = 0
-	src.throw_icon.icon_state = "act_throw_off"
+/mob/living/carbon/proc/throw_2_mode_off()
+	src.in_throw_2_mode = 0
+	src.throw_2_icon.icon_state = "act_throw_2_off"
 
-/mob/living/carbon/proc/throw_mode_on()
-	src.in_throw_mode = 1
-	src.throw_icon.icon_state = "act_throw_on"
+/mob/living/carbon/proc/throw_2_mode_on()
+	src.in_throw_2_mode = 1
+	src.throw_2_icon.icon_state = "act_throw_2_on"
 
-/mob/proc/throw_item(atom/target)
+/mob/proc/throw_2_item(atom/target)
 	return
 
-/mob/living/carbon/throw_item(atom/target)
-	src.throw_mode_off()
+/mob/living/carbon/throw_2_item(atom/target)
+	src.throw_2_mode_off()
 	if(usr.stat || !target)
 		return
 	if(target.type == /obj/screen) return
@@ -362,7 +362,7 @@
 
 	if (istype(item, /obj/item/weapon/grab))
 		var/obj/item/weapon/grab/G = item
-		item = G.throw() //throw the person instead of the grab
+		item = G.throw_2() //throw_2 the person instead of the grab
 		if(ismob(item))
 			var/turf/start_T = get_turf(loc) //Get the start and target tile for the descriptors
 			var/turf/end_T = get_turf(target)
@@ -371,9 +371,9 @@
 				var/start_T_descriptor = "<font color='#6b5d00'>tile at [start_T.x], [start_T.y], [start_T.z] in area [get_area(start_T)]</font>"
 				var/end_T_descriptor = "<font color='#6b4400'>tile at [end_T.x], [end_T.y], [end_T.z] in area [get_area(end_T)]</font>"
 
-				M.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been thrown by [usr.name] ([usr.ckey]) from [start_T_descriptor] with the target [end_T_descriptor]</font>")
-				usr.attack_log += text("\[[time_stamp()]\] <font color='red'>Has thrown [M.name] ([M.ckey]) from [start_T_descriptor] with the target [end_T_descriptor]</font>")
-				msg_admin_attack("[usr.name] ([usr.ckey]) has thrown [M.name] ([M.ckey]) from [start_T_descriptor] with the target [end_T_descriptor] (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[usr.x];Y=[usr.y];Z=[usr.z]'>JMP</a>)")
+				M.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been throw_2n by [usr.name] ([usr.ckey]) from [start_T_descriptor] with the target [end_T_descriptor]</font>")
+				usr.attack_log += text("\[[time_stamp()]\] <font color='red'>Has throw_2n [M.name] ([M.ckey]) from [start_T_descriptor] with the target [end_T_descriptor]</font>")
+				msg_admin_attack("[usr.name] ([usr.ckey]) has throw_2n [M.name] ([M.ckey]) from [start_T_descriptor] with the target [end_T_descriptor] (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[usr.x];Y=[usr.y];Z=[usr.z]'>JMP</a>)")
 
 	if(!item) return //Grab processing has a chance of returning null
 
@@ -381,16 +381,16 @@
 	u_equip(item)
 	update_icons()
 
-	if (istype(usr, /mob/living/carbon)) //Check if a carbon mob is throwing. Modify/remove this line as required.
+	if (istype(usr, /mob/living/carbon)) //Check if a carbon mob is throw_2ing. Modify/remove this line as required.
 		item.loc = src.loc
 		if(src.client)
 			src.client.screen -= item
 		if(istype(item, /obj/item))
 			item:dropped(src) // let it know it's been dropped
 
-	//actually throw it!
+	//actually throw_2 it!
 	if (item)
-		src.visible_message("\red [src] has thrown [item].")
+		src.visible_message("\red [src] has throw_2n [item].")
 
 		if(!src.lastarea)
 			src.lastarea = get_area(src.loc)
@@ -406,7 +406,7 @@
 */
 
 
-		item.throw_at(target, item.throw_range, item.throw_speed)
+		item.throw_2_at(target, item.throw_2_range, item.throw_2_speed)
 
 /mob/living/carbon/fire_act(datum/gas_mixture/air, exposed_temperature, exposed_volume)
 	..()

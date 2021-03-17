@@ -42,7 +42,7 @@
 			add_fingerprint(user)
 			if(iscarbon(user))
 				var/mob/living/carbon/C = user
-				C.throw_mode_on()
+				C.throw_2_mode_on()
 
 	attackby(obj/item/weapon/W as obj, mob/user as mob)
 

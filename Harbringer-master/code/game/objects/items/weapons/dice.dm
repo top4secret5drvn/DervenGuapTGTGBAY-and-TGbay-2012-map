@@ -23,6 +23,6 @@
 	else if(sides == 20 && result == 1)
 		comment = "Ouch, bad luck."
 	icon_state = "[name][result]"
-	user.visible_message("<span class='notice'>[user] has thrown [src]. It lands on [result]. [comment]</span>", \
-						 "<span class='notice'>You throw [src]. It lands on a [result]. [comment]</span>", \
+	user.visible_message("<span class='notice'>[user] has throw_2n [src]. It lands on [result]. [comment]</span>", \
+						 "<span class='notice'>You throw_2 [src]. It lands on a [result]. [comment]</span>", \
 						 "<span class='notice'>You hear [src] landing on a [result]. [comment]</span>")

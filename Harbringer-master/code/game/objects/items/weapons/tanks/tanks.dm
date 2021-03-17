@@ -10,9 +10,9 @@
 	pressure_resistance = ONE_ATMOSPHERE*5
 
 	force = 7.0
-	throwforce = 10.0
-	throw_speed = 1
-	throw_range = 4
+	throw_2force = 10.0
+	throw_2_speed = 1
+	throw_2_range = 4
 
 	var/datum/gas_mixture/air_contents = null
 	var/distribute_pressure = ONE_ATMOSPHERE

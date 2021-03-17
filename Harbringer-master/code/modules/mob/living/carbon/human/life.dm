@@ -518,13 +518,13 @@
 
 		if(Toxins_pp > safe_toxins_max) // Too much toxins
 			var/ratio = (breath.toxins/safe_toxins_max) * 10
-			//adjustToxLoss(Clamp(ratio, MIN_PLASMA_DAMAGE, MAX_PLASMA_DAMAGE))	//Limit amount of damage toxin exposure can do per second
+			//adjustToxLoss(clamp2(ratio, MIN_PLASMA_DAMAGE, MAX_PLASMA_DAMAGE))	//Limit amount of damage toxin exposure can do per second
 			if(reagents)
-				reagents.add_reagent("plasma", Clamp(ratio, MIN_PLASMA_DAMAGE, MAX_PLASMA_DAMAGE))
+				reagents.add_reagent("plasma", clamp2(ratio, MIN_PLASMA_DAMAGE, MAX_PLASMA_DAMAGE))
 			toxins_alert = max(toxins_alert, 1)
 		else if(O2_pp > vox_oxygen_max && species.name == "Vox") //Oxygen is toxic to vox.
 			var/ratio = (breath.oxygen/vox_oxygen_max) * 1000
-			adjustToxLoss(Clamp(ratio, MIN_PLASMA_DAMAGE, MAX_PLASMA_DAMAGE))
+			adjustToxLoss(clamp2(ratio, MIN_PLASMA_DAMAGE, MAX_PLASMA_DAMAGE))
 			toxins_alert = max(toxins_alert, 1)
 		else
 			toxins_alert = 0

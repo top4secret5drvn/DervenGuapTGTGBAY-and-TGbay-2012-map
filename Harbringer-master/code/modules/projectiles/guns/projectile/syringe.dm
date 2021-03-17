@@ -4,8 +4,8 @@
 	icon_state = "syringegun"
 	item_state = "syringegun"
 	w_class = 3
-	throw_speed = 2
-	throw_range = 10
+	throw_2_speed = 2
+	throw_2_range = 10
 	force = 4
 	m_amt = 2000
 	clumsy_check = 0

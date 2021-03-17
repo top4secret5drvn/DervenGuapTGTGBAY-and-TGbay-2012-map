@@ -5,10 +5,10 @@
 	icon_state = "toyhammer"
 	flags = FPRINT | TABLEPASS
 	slot_flags = SLOT_BELT
-	throwforce = 0
+	throw_2force = 0
 	w_class = 1.0
-	throw_speed = 7
-	throw_range = 15
+	throw_2_speed = 7
+	throw_2_range = 15
 	attack_verb = list("banned")
 
 	suicide_act(mob/user)
@@ -23,9 +23,9 @@
 	flags = FPRINT | TABLEPASS
 	slot_flags = SLOT_BELT
 	force = 18
-	throw_speed = 1
-	throw_range = 4
-	throwforce = 10
+	throw_2_speed = 1
+	throw_2_range = 4
+	throw_2force = 10
 	w_class = 1
 
 	suicide_act(mob/user)
@@ -78,7 +78,7 @@
 	flags = FPRINT | TABLEPASS
 	slot_flags = SLOT_BELT
 	force = 4
-	throwforce = 1
+	throw_2force = 1
 	w_class = 3
 	attack_verb = list("attacked", "slashed", "sliced", "torn", "ripped", "diced", "cut")
 
@@ -98,7 +98,7 @@
 	flags = FPRINT | TABLEPASS | CONDUCT
 	slot_flags = SLOT_BELT
 	force = 55
-	throwforce = 10
+	throw_2force = 10
 	w_class = 3
 	attack_verb = list("attacked", "slashed", "sliced", "torn", "ripped", "diced", "cut")
 
@@ -121,7 +121,7 @@
 	flags = FPRINT | TABLEPASS | CONDUCT
 	slot_flags = SLOT_BELT | SLOT_BACK
 	force = 55
-	throwforce = 10
+	throw_2force = 10
 	w_class = 3
 	attack_verb = list("attacked", "slashed", "sliced", "torn", "ripped", "diced", "cut")
 
@@ -143,6 +143,6 @@
 	icon_state = "harpoon"
 	item_state = "harpoon"
 	force = 30
-	throwforce = 15
+	throw_2force = 15
 	w_class = 3
 	attack_verb = list("jabbed","ripped")

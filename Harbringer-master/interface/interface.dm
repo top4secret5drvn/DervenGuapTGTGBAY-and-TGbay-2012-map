@@ -44,7 +44,7 @@ Hotkey-Mode: (hotkey-mode must be on)
 \tw = up
 \tq = drop
 \te = equip
-\tr = throw
+\tr = throw_2
 \tt = say
 \tx = swap-hand
 \tz = activate held object (or y)
@@ -64,7 +64,7 @@ Any-Mode: (hotkey doesn't need to be on)
 \tCtrl+w = up
 \tCtrl+q = drop
 \tCtrl+e = equip
-\tCtrl+r = throw
+\tCtrl+r = throw_2
 \tCtrl+x = swap-hand
 \tCtrl+z = activate held object (or Ctrl+y)
 \tCtrl+f = cycle-intents-left
@@ -78,7 +78,7 @@ Any-Mode: (hotkey doesn't need to be on)
 \tHOME = drop
 \tPGUP = swap-hand
 \tPGDN = activate held object
-\tEND = throw
+\tEND = throw_2
 </font>"}
 
 	var/admin = {"<font color='purple'>

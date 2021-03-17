@@ -23,7 +23,7 @@
 	var/obj/screen/fire = null
 	var/obj/screen/bodytemp = null
 	var/obj/screen/healths = null
-	var/obj/screen/throw_icon = null
+	var/obj/screen/throw_2_icon = null
 	var/obj/screen/nutrition_icon = null
 	var/obj/screen/pressure = null
 	var/obj/screen/damageoverlay = null
@@ -132,7 +132,7 @@
 
 	var/list/mapobjs = list()
 
-	var/in_throw_mode = 0
+	var/in_throw_2_mode = 0
 
 	var/coughedtime = null
 

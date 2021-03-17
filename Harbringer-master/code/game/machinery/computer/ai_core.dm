@@ -204,7 +204,7 @@ That prevents a few funky behaviors.
 							new /obj/structure/AIcore/deactivated(T.loc)//Spawns a deactivated terminal at AI location.
 							T.aiRestorePowerRoutine = 0//So the AI initially has power.
 							T.control_disabled = 1//Can't control things remotely if you're stuck in a card!
-							T.loc = C//Throw AI into the card.
+							T.loc = C//throw_2 AI into the card.
 							C.name = "inteliCard - [T.name]"
 							if (T.stat == 2)
 								C.icon_state = "aicard-404"
@@ -355,7 +355,7 @@ That prevents a few funky behaviors.
 								if(A_T)//If there is an AI on the target card.
 									U << "\red <b>ERROR</b>: \black [A_T.name] already installed. Remove [A_T.name] to install a new one."
 								else
-									A.loc = C//Throw them into the target card. Since they are already on a card, transfer is easy.
+									A.loc = C//throw_2 them into the target card. Since they are already on a card, transfer is easy.
 									C.name = "inteliCard - [A.name]"
 									C.icon_state = "aicard-full"
 									T.AI = null
@@ -367,7 +367,7 @@ That prevents a few funky behaviors.
 									U << "\red <b>ERROR</b>: \black AI flush is in progress, cannot execute transfer protocol."
 								else
 									if(A_T&&!A_T.stat)//If there is an AI on the target card and it's not inactive.
-										A_T.loc = T//Throw them into suit.
+										A_T.loc = T//throw_2 them into suit.
 										C.icon_state = "aicard"
 										C.name = "inteliCard"
 										C.overlays.Cut()

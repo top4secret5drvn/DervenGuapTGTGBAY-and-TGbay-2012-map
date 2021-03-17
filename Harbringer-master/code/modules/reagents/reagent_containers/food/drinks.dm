@@ -151,7 +151,7 @@
 	item_state = "" //nope :(
 	w_class = 4
 	force = 14
-	throwforce = 10
+	throw_2force = 10
 	amount_per_transfer_from_this = 20
 	possible_transfer_amounts = null
 	volume = 150

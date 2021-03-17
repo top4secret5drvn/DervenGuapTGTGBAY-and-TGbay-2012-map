@@ -72,7 +72,7 @@
 		src.visible_message("\red [src] has been hit by [O].")
 		var/armor = run_armor_check(zone, "melee", "Your armor has protected your [zone].", "Your armor has softened hit to your [zone].")
 		if(armor < 2)
-			apply_damage(O.throwforce*(speed/5), dtype, zone, armor, O.sharp, O)
+			apply_damage(O.throw_2force*(speed/5), dtype, zone, armor, O.sharp, O)
 
 		if(!O.fingerprintslast)
 			return
@@ -81,9 +81,9 @@
 		if(assailant && assailant.mob && istype(assailant.mob,/mob))
 			var/mob/M = assailant.mob
 
-			src.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been hit with a thrown [O], last touched by [M.name] ([assailant.ckey])</font>")
-			M.attack_log += text("\[[time_stamp()]\] <font color='red'>Hit [src.name] ([src.ckey]) with a thrown [O]</font>")
-			msg_admin_attack("[src.name] ([src.ckey]) was hit by a thrown [O], last touched by [M.name] ([assailant.ckey]) (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[src.x];Y=[src.y];Z=[src.z]'>JMP</a>)")
+			src.attack_log += text("\[[time_stamp()]\] <font color='orange'>Has been hit with a throw_2n [O], last touched by [M.name] ([assailant.ckey])</font>")
+			M.attack_log += text("\[[time_stamp()]\] <font color='red'>Hit [src.name] ([src.ckey]) with a throw_2n [O]</font>")
+			msg_admin_attack("[src.name] ([src.ckey]) was hit by a throw_2n [O], last touched by [M.name] ([assailant.ckey]) (<A HREF='?_src_=holder;adminplayerobservecoodjump=1;X=[src.x];Y=[src.y];Z=[src.z]'>JMP</a>)")
 
 			// Begin BS12 momentum-transfer code.
 
@@ -93,7 +93,7 @@
 				var/dir = get_dir(M,src)
 
 				visible_message("\red [src] staggers under the impact!","\red You stagger under the impact!")
-				src.throw_at(get_edge_target_turf(src,dir),1,momentum)
+				src.throw_2_at(get_edge_target_turf(src,dir),1,momentum)
 
 				if(istype(W.loc,/mob/living) && W.sharp) //Projectile is embedded and suitable for pinning.
 
@@ -144,7 +144,7 @@
 	return
 
 /mob/living/proc/adjust_fire_stacks(add_fire_stacks) //Adjusting the amount of fire_stacks we have on person
-    fire_stacks = Clamp(fire_stacks + add_fire_stacks, min = -20, max = 20)
+    fire_stacks = clamp2(fire_stacks + add_fire_stacks, min = -20, max = 20)
 
 /mob/living/proc/handle_fire()
 	if(fire_stacks < 0)

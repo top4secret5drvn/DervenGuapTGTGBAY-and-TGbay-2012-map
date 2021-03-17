@@ -20,7 +20,7 @@
 //Uncomment if you have code that you want triggered when the light level on an atom changes.
 
 
-#define ul_Clamp(Value) min(max(Value, 0), ul_Steps)
+#define ul_clamp2(Value) min(max(Value, 0), ul_Steps)
 #define ul_IsLuminous(A) (A.LuminosityRed || A.LuminosityGreen || A.LuminosityBlue)
 #define ul_Luminosity(A) max(A.LuminosityRed, A.LuminosityGreen, A.LuminosityBlue)
 
@@ -254,15 +254,15 @@ turf/var/list/MaxBlue
 
 turf/proc/ul_GetRed()
 	if(MaxRed)
-		return ul_Clamp(max(MaxRed))
+		return ul_clamp2(max(MaxRed))
 	return 0
 turf/proc/ul_GetGreen()
 	if(MaxGreen)
-		return ul_Clamp(max(MaxGreen))
+		return ul_clamp2(max(MaxGreen))
 	return 0
 turf/proc/ul_GetBlue()
 	if(MaxBlue)
-		return ul_Clamp(max(MaxBlue))
+		return ul_clamp2(max(MaxBlue))
 	return 0
 
 turf/proc/ul_UpdateLight()

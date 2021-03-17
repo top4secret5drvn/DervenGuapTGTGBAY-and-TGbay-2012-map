@@ -169,7 +169,7 @@
 		RunFunction(node/statement/FunctionCall/stmt)
 			//Note that anywhere /node/statement/FunctionCall/stmt is used so may /node/expression/FunctionCall
 
-			// If recursion gets too high (max 50 nested functions) throw an error
+			// If recursion gets too high (max 50 nested functions) throw_2 an error
 			if(cur_recursion >= max_recursion)
 				RaiseError(new/runtimeError/RecursionLimitReached())
 				return 0
@@ -179,7 +179,7 @@
 				def = GetFunction(stmt.func_name)
 			else if(istype(stmt.object))				//A method of an object exposed as a variable is being called, stmt.object is a /node/identifier
 				var/O = GetVariable(stmt.object.id_name)	//Gets a reference to the object which is the target of the function call.
-				if(!O) return							//Error already thrown in GetVariable()
+				if(!O) return							//Error already throw_2n in GetVariable()
 				def = Eval(O)
 
 			if(!def) return

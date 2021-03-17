@@ -13,7 +13,7 @@
 	var/power = 1.0
 	var/code = 1.0
 	var/id = 1.0
-	var/drive_range = 50 //this is mostly irrelevant since current mass drivers throw into space, but you could make a lower-range mass driver for interstation transport or something I guess.
+	var/drive_range = 50 //this is mostly irrelevant since current mass drivers throw_2 into space, but you could make a lower-range mass driver for interstation transport or something I guess.
 
 
 	proc/drive(amount)
@@ -31,7 +31,7 @@
 					break
 				use_power(500)
 				spawn( 0 )
-					O.throw_at(target, drive_range * power, power)
+					O.throw_2_at(target, drive_range * power, power)
 		flick("mass_driver1", src)
 		return
 

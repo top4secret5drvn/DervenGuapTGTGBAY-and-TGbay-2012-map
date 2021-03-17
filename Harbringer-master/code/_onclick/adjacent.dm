@@ -23,7 +23,7 @@
 	* If you are in the same turf, always true
 	* If you are vertically/horizontally adjacent, ensure there are no border objects
 	* If you are diagonally adjacent, ensure you can pass through at least one of the mutually adjacent square.
-		* Passing through in this case ignores anything with the throwpass flag, such as tables, racks, and morgue trays.
+		* Passing through in this case ignores anything with the throw_2pass flag, such as tables, racks, and morgue trays.
 */
 /turf/Adjacent(var/atom/neighbor, var/atom/target = null)
 	var/turf/T0 = get_turf(neighbor)
@@ -90,23 +90,23 @@
 /obj/machinery/door/Adjacent(var/atom/neighbor)
 	var/obj/machinery/door/firedoor/border_only/BOD = locate() in loc
 	if(BOD)
-		BOD.throwpass = 1 // allow click to pass
+		BOD.throw_2pass = 1 // allow click to pass
 		. = ..()
-		BOD.throwpass = 0
+		BOD.throw_2pass = 0
 		return .
 	return ..()
 
 
 /*
 	This checks if you there is uninterrupted airspace between that turf and this one.
-	This is defined as any dense ON_BORDER object, or any dense object without throwpass.
+	This is defined as any dense ON_BORDER object, or any dense object without throw_2pass.
 	The border_only flag allows you to not objects (for source and destination squares)
 */
 /turf/proc/ClickCross(var/target_dir, var/border_only, var/target_atom = null)
 	for(var/obj/O in src)
-		if( !O.density || O == target_atom || O.throwpass) continue // throwpass is used for anything you can click through
+		if( !O.density || O == target_atom || O.throw_2pass) continue // throw_2pass is used for anything you can click through
 
-		if( O.flags&ON_BORDER) // windows have throwpass but are on border, check them first
+		if( O.flags&ON_BORDER) // windows have throw_2pass but are on border, check them first
 			if( O.dir & target_dir || O.dir&(O.dir-1) ) // full tile windows are just diagonals mechanically
 				return 0
 
@@ -114,11 +114,11 @@
 			return 0
 	return 1
 /*
-	Aside: throwpass does not do what I thought it did originally, and is only used for checking whether or not
-	a thrown object should stop after already successfully entering a square.  Currently the throw code involved
+	Aside: throw_2pass does not do what I thought it did originally, and is only used for checking whether or not
+	a throw_2n object should stop after already successfully entering a square.  Currently the throw_2 code involved
 	only seems to affect hitting mobs, because the checks performed against objects are already performed when
-	entering or leaving the square.  Since throwpass isn't used on mobs, but only on objects, it is effectively
-	useless.  Throwpass may later need to be removed and replaced with a passcheck (bitfield on movable atom passflags).
+	entering or leaving the square.  Since throw_2pass isn't used on mobs, but only on objects, it is effectively
+	useless.  throw_2pass may later need to be removed and replaced with a passcheck (bitfield on movable atom passflags).
 
 	Since I don't want to complicate the click code rework by messing with unrelated systems it won't be changed here.
 */

@@ -19,7 +19,7 @@
 
 				if(iscarbon(user))
 					var/mob/living/carbon/C = user
-					C.throw_mode_on()
+					C.throw_2_mode_on()
 				spawn(det_time)
 					try_to_explode()
 			else ..()

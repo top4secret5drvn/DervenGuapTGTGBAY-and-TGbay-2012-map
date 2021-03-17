@@ -52,7 +52,7 @@
 			die()
 	return
 
-/obj/item/ashtray/throw_impact(atom/hit_atom)
+/obj/item/ashtray/throw_2_impact(atom/hit_atom)
 	if (health > 0)
 		health = max(0,health - 3)
 		if (health < 1)
@@ -84,7 +84,7 @@
 	g_amt = 30
 	m_amt = 30
 	empty_desc = "Cheap plastic ashtray."
-	throwforce = 3.0
+	throw_2force = 3.0
 	die()
 		..()
 		name = "pieces of plastic"
@@ -104,7 +104,7 @@
 	health = 72.0
 	m_amt = 80
 	empty_desc = "Massive bronze ashtray."
-	throwforce = 10.0
+	throw_2force = 10.0
 
 	die()
 		..()
@@ -125,7 +125,7 @@
 	health = 12.0
 	g_amt = 60
 	empty_desc = "Glass ashtray. Looks fragile."
-	throwforce = 6.0
+	throw_2force = 6.0
 
 	die()
 		..()

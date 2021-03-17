@@ -6,9 +6,9 @@
 	item_state = "toolbox_red"
 	flags = FPRINT | TABLEPASS| CONDUCT
 	force = 10.0
-	throwforce = 10.0
-	throw_speed = 1
-	throw_range = 7
+	throw_2force = 10.0
+	throw_2_speed = 1
+	throw_2_range = 7
 	w_class = 4.0
 	origin_tech = "combat=1"
 	attack_verb = list("robusted")

@@ -12,19 +12,19 @@
 /obj/item/projectile/forcebolt/on_hit(var/atom/target, var/blocked = 0)
 
 	var/obj/T = target
-	var/throwdir = get_dir(firer,target)
-	T.throw_at(get_edge_target_turf(target, throwdir),10,10)
+	var/throw_2dir = get_dir(firer,target)
+	T.throw_2_at(get_edge_target_turf(target, throw_2dir),10,10)
 	return 1
 
 /*
 /obj/item/projectile/forcebolt/strong/on_hit(var/atom/target, var/blocked = 0)
 
 	// NONE OF THIS WORKS. DO NOT USE.
-	var/throwdir = null
+	var/throw_2dir = null
 
 	for(var/mob/M in hearers(2, src))
 		if(M.loc != src.loc)
-			throwdir = get_dir(src,target)
-			M.throw_at(get_edge_target_turf(M, throwdir),15,1)
+			throw_2dir = get_dir(src,target)
+			M.throw_2_at(get_edge_target_turf(M, throw_2dir),15,1)
 	return ..()
 */

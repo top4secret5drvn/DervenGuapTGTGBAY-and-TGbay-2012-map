@@ -6,9 +6,9 @@
 	flags = TABLEPASS
 	force = 1.0
 	w_class = 1.0
-	throwforce = 1.0
-	throw_speed = 3
-	throw_range = 5
+	throw_2force = 1.0
+	throw_2_speed = 3
+	throw_2_range = 5
 	origin_tech = "biotech=3"
 	attack_verb = list("attacked", "slapped", "whacked")
 

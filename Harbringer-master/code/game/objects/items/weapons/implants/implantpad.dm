@@ -6,8 +6,8 @@
 	icon = 'icons/obj/items.dmi'
 	icon_state = "implantpad-0"
 	item_state = "electronic"
-	throw_speed = 1
-	throw_range = 5
+	throw_2_speed = 1
+	throw_2_range = 5
 	w_class = 2.0
 	var/obj/item/weapon/implantcase/case = null
 	var/broadcasting = null

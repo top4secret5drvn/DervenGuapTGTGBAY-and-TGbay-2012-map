@@ -276,7 +276,7 @@
 				<br>
 				And yet, there are some amongst us who do not see the benefits of those who have come before us - indeed, some among them profess the opinion that there
 				is no species that could possibly match humanity in it's achievements and knowledge, or simply that employing non-human technology is dangerous and unethical.
-				Folly, say I. If it is their desire to throw onto the wayside the greatest achievements <i>in the history of the galaxy</i>, simply for preferment of the
+				Folly, say I. If it is their desire to throw_2 onto the wayside the greatest achievements <i>in the history of the galaxy</i>, simply for preferment of the
 				greatest achievements <i>in the history of mankind</i>, then they have no business in the establishment of science.<br>
 				<a href="#Contents">Contents</a>
 

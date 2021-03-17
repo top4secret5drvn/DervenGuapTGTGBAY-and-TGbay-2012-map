@@ -17,10 +17,10 @@
 	item_state = "pen"
 	flags = FPRINT | TABLEPASS
 	slot_flags = SLOT_BELT | SLOT_EARS
-	throwforce = 0
+	throw_2force = 0
 	w_class = 1.0
-	throw_speed = 7
-	throw_range = 15
+	throw_2_speed = 7
+	throw_2_range = 15
 	m_amt = 10
 	var/colour = "black"	//what colour the ink is!
 	pressure_resistance = 2

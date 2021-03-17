@@ -5,7 +5,7 @@
 	item_state = "rods"
 	flags = CONDUCT
 	force = 9
-	throwforce = 10
+	throw_2force = 10
 	w_class = 3
 	m_amt = 1875
 	attack_verb = list("hit", "bludgeoned", "whacked", "bonked")

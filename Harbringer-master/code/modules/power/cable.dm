@@ -209,10 +209,10 @@
 	var/amount = MAXCOIL
 	item_color = COLOR_RED
 	desc = "A coil of power cable."
-	throwforce = 10
+	throw_2force = 10
 	w_class = 2.0
-	throw_speed = 2
-	throw_range = 5
+	throw_2_speed = 2
+	throw_2_range = 5
 	m_amt = 50
 	g_amt = 20
 	flags = TABLEPASS | FPRINT | CONDUCT

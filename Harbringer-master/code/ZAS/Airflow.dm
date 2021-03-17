@@ -118,7 +118,7 @@ proc/Airflow(zone/A, zone/B)
 	 //Don't go any further if n is lower than the lowest value needed for airflow.
 	if(abs(n) < vsc.airflow_lightest_pressure) return
 
-	//These turfs are the midway point between A and B, and will be the destination point for thrown objects.
+	//These turfs are the midway point between A and B, and will be the destination point for throw_2n objects.
 	var/list/connection/connections_A = A.connections
 	var/list/turf/connected_turfs = list()
 	for(var/connection/C in connections_A) //Grab the turf that is in the zone we are flowing to (determined by n)
@@ -133,7 +133,7 @@ proc/Airflow(zone/A, zone/B)
 			else
 				connected_turfs |= C.B
 
-	//Get lists of things that can be thrown across the room for each zone (assumes air is moving from zone B to zone A)
+	//Get lists of things that can be throw_2n across the room for each zone (assumes air is moving from zone B to zone A)
 	var/list/air_sucked = B.movables()
 	var/list/air_repelled = A.movables()
 	if(n < 0)

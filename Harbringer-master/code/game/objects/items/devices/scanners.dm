@@ -67,10 +67,10 @@ REAGENT SCANNER
 	desc = "A hand-held body scanner able to distinguish vital signs of the subject."
 	flags = FPRINT | TABLEPASS | CONDUCT
 	slot_flags = SLOT_BELT
-	throwforce = 3
+	throw_2force = 3
 	w_class = 1.0
-	throw_speed = 5
-	throw_range = 10
+	throw_2_speed = 5
+	throw_2_range = 10
 	m_amt = 200
 	origin_tech = "magnets=1;biotech=1"
 	var/mode = 1;
@@ -205,9 +205,9 @@ REAGENT SCANNER
 	w_class = 2.0
 	flags = FPRINT | TABLEPASS| CONDUCT
 	slot_flags = SLOT_BELT
-	throwforce = 5
-	throw_speed = 4
-	throw_range = 20
+	throw_2force = 5
+	throw_2_speed = 4
+	throw_2_range = 20
 	m_amt = 30
 	g_amt = 20
 	origin_tech = "magnets=1;engineering=1"
@@ -275,9 +275,9 @@ REAGENT SCANNER
 	w_class = 2.0
 	flags = FPRINT | TABLEPASS| CONDUCT | OPENCONTAINER
 	slot_flags = SLOT_BELT
-	throwforce = 5
-	throw_speed = 4
-	throw_range = 20
+	throw_2force = 5
+	throw_2_speed = 4
+	throw_2_range = 20
 	m_amt = 30
 	g_amt = 20
 	origin_tech = "magnets=2;biotech=2"
@@ -348,9 +348,9 @@ REAGENT SCANNER
 	w_class = 2.0
 	flags = FPRINT | TABLEPASS | CONDUCT
 	slot_flags = SLOT_BELT
-	throwforce = 5
-	throw_speed = 4
-	throw_range = 20
+	throw_2force = 5
+	throw_2_speed = 4
+	throw_2_range = 20
 	m_amt = 30
 	g_amt = 20
 	origin_tech = "magnets=2;biotech=2"
